@@ -1,0 +1,41 @@
+name: caysa2021
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  animated_splash_screen: ^1.0.1+2
+  flutter_launcher_icons: "^0.8.0"
+  font_awesome_flutter:
+  
+  
+flutter_icons:
+  ios: true
+  android: true
+  image_path: "assets/icons/logo.png"
+  adaptive_icon_background: "assets/icons/logo.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo/
+  fonts:
+    - family: Circular
+      fonts:
+        - asset: fonts/CircularStd-Medium.ttf
+        - asset: fonts/CircularAir-Light.ttf
+          weight: 100
+        - asset: fonts/CircularStd-Bold.ttf
+          weight: 500
