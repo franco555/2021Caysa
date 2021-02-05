@@ -18,17 +18,17 @@ class Product {
 List<Product> products = [
   Product(
       id: 1,
-      title: "Carteras",
+      title: "Goku",
       price: 500,
-      size: 12,
+      size: 30,
       description: dummyText,
       image: "assets/images/bag_1.png",
       color: Color(0xFF3D82AE)),
   Product(
       id: 2,
-      title: "Belt Bag",
+      title: "Vegeta",
       price: 234,
-      size: 8,
+      size: 30,
       description: dummyText,
       image: "assets/images/bag_2.png",
       color: Color(0xFFD3A984)),
