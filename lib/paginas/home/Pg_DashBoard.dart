@@ -3,9 +3,18 @@ import 'package:caysa2021/paginas/home/components/body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 //https://www.youtube.com/watch?v=XBKzpTz65Io
-class PgDashBoard extends StatelessWidget {
+class PgDashBoard extends StatefulWidget {
+  PgDashBoard({Key key}) : super(key: key);
+  @override
+  _PgDashBoardState createState() => _PgDashBoardState();
+}
+
+class _PgDashBoardState extends State<PgDashBoard> {
+
+
   @override
   Widget build(BuildContext context) {
+   //final authService = Provider.of<AuthService>(context);
     return Scaffold(
       appBar: buildAppBar(),
       body: Body(),
@@ -37,7 +46,13 @@ class PgDashBoard extends StatelessWidget {
           ),
           onPressed: () {},
         ),
-        SizedBox(width: kDefaultPaddin / 2)
+        SizedBox(width: kDefaultPaddin / 2),
+         /*RaisedButton(
+          child: Text('Cerrar Sesión ${authService.user.displayName}'),
+          onPressed: () {
+            authService.signOut();
+          },
+        )*/
       ],
     );
   }

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Users with ChangeNotifier {
@@ -15,9 +15,9 @@ class Users with ChangeNotifier {
   });
 
   factory Users.fromFirestore(DocumentSnapshot userDoc) {
-    Map userData = userDoc.data;
+    Map userData = userDoc.data();
     return Users(
-      id: userDoc.documentID,
+      id: userDoc.id,
       displayName: userData['displayName'],
       photoURL: userData['photoURL'],
       email: userData['email'],
@@ -25,11 +25,11 @@ class Users with ChangeNotifier {
   }
 
   void setFromFireStore(DocumentSnapshot userDoc) {
-    Map userData = userDoc.data;
-    this.id = userDoc.documentID;
+    Map userData = userDoc.data();
+    this.id = userDoc.id;
     this.displayName = userData['displayName'];
     this.photoURL = userData['photoURL'];
     this.email = userData['email'];
     notifyListeners();
   }
-}
+}*/

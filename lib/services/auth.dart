@@ -1,4 +1,4 @@
-import 'package:caysa2021/models/user.dart';
+/*import 'package:caysa2021/models/user.dart3';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +16,7 @@ class AuthService with ChangeNotifier {
   GoogleSignInAccount _googleUser;
   Users _user = new Users();
 
-  final Firestore _db = Firestore.instance;
+  final FirebaseFirestore _db = FirebaseFirestore.instance;
   AuthStatus _status = AuthStatus.Uninitialized;
 
   final GoogleSignIn _googleSignIn = GoogleSignIn();
@@ -25,14 +25,12 @@ class AuthService with ChangeNotifier {
     _auth.onAuthStateChanged.listen(_onAuthStateChanged);
   }
 
-  Future<void> _onAuthStateChanged(FirebaseUser firebaseUser) async {
+  Future<void> _onAuthStateChanged(FirebaseAuth firebaseUser) async {
     if (firebaseUser == null) {
       _status = AuthStatus.Unauthenticated;
     } else {
       DocumentSnapshot userSnap = await _db
-        .collection('users')
-        .document(firebaseUser.uid)
-        .get();
+        .collection('users').document(firebaseUser.currentUser.uid).get();
 
       _user.setFromFireStore(userSnap);
       _status = AuthStatus.Authenticated;
@@ -41,7 +39,7 @@ class AuthService with ChangeNotifier {
     notifyListeners();
   }
 
-  Future<FirebaseUser> googleSignIn() async {
+  Future<FirebaseAuth> googleSignIn() async {
     _status = AuthStatus.Authenticating;
     notifyListeners();
 
@@ -93,4 +91,4 @@ class AuthService with ChangeNotifier {
   Users get user => _user;
   GoogleSignInAccount get googleUser => _googleUser;
 
-}
+}*/

@@ -10,10 +10,10 @@ dependencies:
   flutter:
     sdk: flutter
 
-  firebase_auth: ^0.15.5+2
-  cloud_firestore: ^0.13.4+2
-  provider: ^4.3.3
-  google_sign_in: ^4.1.4
+  #firebase_auth: ^0.20.0+1
+  #cloud_firestore: ^0.16.0
+  #provider: ^4.3.3
+  #google_sign_in: ^4.5.9 
 
   cupertino_icons: ^1.0.0
   flutter_launcher_icons: "^0.8.0"

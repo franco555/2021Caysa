@@ -1,0 +1,27 @@
+/*import 'package:caysa2021/services/auth.dart3';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+class PgSignIn extends StatefulWidget {
+  PgSignIn({Key key}) : super(key: key);
+  @override
+  _PgSignInState createState() => _PgSignInState();
+}
+
+class _PgSignInState extends State<PgSignIn> {
+  @override
+  Widget build(BuildContext context) {
+    final authService = Provider.of<AuthService>(context);
+
+    return Scaffold(
+      body: Center(
+        child: RaisedButton(
+          child: Text('Inicia con Google'),
+          onPressed: () async {
+            await authService.googleSignIn();
+          },
+        ),
+      ),
+    );
+  }
+}*/

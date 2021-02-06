@@ -7,17 +7,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:111162228298:android:cd9d71e6d2eabca6d070b3",
+        "mobilesdk_app_id": "1:111162228298:android:514ccc0c1b25a03bd070b3",
         "android_client_info": {
-          "package_name": "caysa.admin"
+          "package_name": "com.example.caysa2021"
         }
       },
       "oauth_client": [
         {
-          "client_id": "111162228298-earh7i0li8aq0umbbq73dl7chnggreag.apps.googleusercontent.com",
+          "client_id": "111162228298-u5f3in1bhl79rf9ltb763k5r1qmesp5l.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "caysa.admin",
+            "package_name": "com.example.caysa2021",
             "certificate_hash": "cb29544fd4c5ba41f6d9b8f56018345b4ce833e3"
           }
         },
