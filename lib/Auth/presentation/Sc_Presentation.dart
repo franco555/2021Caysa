@@ -4,7 +4,9 @@ class ScPresentation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ScBodyPresentation(),
+      body:SingleChildScrollView(
+         child:ScBodyPresentation(),
+      )
     );
   }
 }

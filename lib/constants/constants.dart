@@ -8,6 +8,8 @@ const kDefaultPaddin = 20.0;
 //Login
 
 const kStartBackgroundColor = Color(0xFF123E59);
+const kStartBackground2Color = Color(0xFF1C8C8C);
+
 
 const kTextColorVerdeMate=Color(0xFFB8D9C6);
 const kTextColorVerdeAgua=Color(0xFF49C6DE);

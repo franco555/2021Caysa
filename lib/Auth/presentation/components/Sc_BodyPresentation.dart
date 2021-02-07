@@ -11,25 +11,20 @@ class ScBodyPresentation extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     // This size provide us total height and width of our screen
-    return Background(
-      child: SingleChildScrollView(
-        child: Column(
+    return Background (
+          child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              "Bienvenido!",
-              style: TextStyle(color: kTextColorVerdeAgua, fontSize: 26),
-            ),
-            SizedBox(height: size.height * 0.05),
+          children: <Widget>[           
             SvgPicture.asset(
               "assets/logo/logo_and_name_white.svg",
               height: size.width * 0.35,
             ),
-            SizedBox(height: size.height * 0.05),
+            SizedBox(height: 50.0,),
+            
             RoundedButton(
               text:"Iniciar",
               sizeText: 18,
-              fw: FontWeight.w500,
+              fw: FontWeight.w400,
               color: kTextColorVerdeAgua,
               textColor: Colors.white,
               press: () {
@@ -61,8 +56,9 @@ class ScBodyPresentation extends StatelessWidget {
               },
             ),
           ],
+
         ),
-      ),
+      
     );
   }
 }

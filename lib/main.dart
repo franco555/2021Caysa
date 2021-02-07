@@ -1,4 +1,4 @@
-import 'package:caysa2021/Auth/presentation/Sc_Presentation.dart';
+import 'package:caysa2021/Auth/presentation/components/Sc_BodyPresentation.dart';
 import 'package:caysa2021/constants/constants.dart';
 import 'package:flutter/material.dart';
 void main() {
@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: kStartBackgroundColor,
       ),
-      home: ScPresentation(),
+      home: ScBodyPresentation(),
     );
   }
 }
