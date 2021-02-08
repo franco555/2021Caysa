@@ -27,14 +27,15 @@ class Body extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                "LOGIN",
-                style: TextStyle(fontWeight: FontWeight.bold, color: fcolorBtnLogin, fontSize: 30.0),
-              ),
-              SizedBox(height: size.height * 0.03),
+              
               SvgPicture.asset(
                 "assets/logo/logo_and_name_white.svg",
                 height: 150.0,
+              ),
+              SizedBox(height: size.height * 0.03),
+              Text(
+                "Crear Usuario",
+                style: TextStyle(fontWeight: FontWeight.bold, color: fcolorBtnLogin, fontSize: 30.0),
               ),
               SizedBox(height: size.height * 0.03),
               RoundedInputField(
@@ -44,59 +45,20 @@ class Body extends StatelessWidget {
               RoundedPasswordField(
                 onChanged: (value) {},
               ),
-              ForgotPassword(
-                press: (){
-                   Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return ScForgotPassword();
-                      },
-                    ),
-                  );
-                },
+              RoundedPasswordField(
+                repitPassword: true,
+                onChanged: (value) {},
               ),
               SizedBox(height: 20.0),
               RoundedButton(
                 color: fcolorBtnLogin,
                 fw: FontWeight.w400,
                 sizeText: 16,
-                text: "Iniciar",
+                text: "Crear",
                 press: () {},
               ),
               SizedBox(height: 20.0),
-              AlreadyHaveAnAccountCheck(
-                press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return ScSignUp();
-                      },
-                    ),
-                  );
-                },
-              ),
-              SizedBox(height: 20.0),
-              OrDivider(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  SocalIcon(
-                    iconSrc: "assets/icons/facebook.svg",
-                    press: () {},
-                  ),
-                  SocalIcon(
-                    iconSrc: "assets/icons/twitter.svg",
-                    press: () {},
-                  ),
-                  SocalIcon(
-                    iconSrc: "assets/icons/google-plus.svg",
-                    press: () {},
-                  ),
-                ],
-              )
-            ],
+            ]
           ),
         ),
       ),
