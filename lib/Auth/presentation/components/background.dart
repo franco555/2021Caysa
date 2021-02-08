@@ -11,7 +11,7 @@ class Background extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(color: kStartBackgroundColor,
+    return Container(color: kThemeBackgroundColor,
       height: size.height,
       width: double.infinity,
       child: Stack(
@@ -25,7 +25,7 @@ class Background extends StatelessWidget {
                 width: size.width,
                 height:size.height/2,
                 decoration: BoxDecoration(
-                  color: kStartBackground2Color,
+                  color: kThemeDetailColor,
                 )
               ),
             ),

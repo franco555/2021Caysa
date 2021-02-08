@@ -20,7 +20,7 @@ class _MyAppState extends State<MyApp> {
       title: 'CAYSA',
       theme: ThemeData(
         primaryColor: kPrimaryColor,
-        scaffoldBackgroundColor: kStartBackgroundColor,
+        scaffoldBackgroundColor: kThemeBackgroundColor,
       ),
       home: ScBodyPresentation(),
     );

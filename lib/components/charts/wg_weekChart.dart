@@ -19,7 +19,7 @@ class WeeklyChart extends StatelessWidget {
               showTitles: true,
               getTitles: getWeek,
               getTextStyles: (value) => const TextStyle(
-                color: kTextColorVerde,
+                color: fcolorBtnRegister,
                 fontSize: 10,
                 fontWeight: FontWeight.w400,
               ),
@@ -43,7 +43,7 @@ getBarGroups() {
               BarChartRodData(
                 y: value,
                 //This is not the proper way, this is just for demo
-                colors: [i == 4 ? kPrimaryColor : kTextColorVerdeAgua],
+                colors: [i == 4 ? kPrimaryColor : fcolorBtnLogin],
                 width: 5,
               )
             ],

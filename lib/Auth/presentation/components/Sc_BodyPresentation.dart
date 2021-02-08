@@ -25,7 +25,7 @@ class ScBodyPresentation extends StatelessWidget {
               text:"Iniciar",
               sizeText: 18,
               fw: FontWeight.w400,
-              color: kTextColorVerdeAgua,
+              color: fcolorBtnLogin,
               textColor: Colors.white,
               press: () {
                 Navigator.push(
@@ -40,7 +40,7 @@ class ScBodyPresentation extends StatelessWidget {
             ),
             RoundedButton(
               text: "Registrarse",
-              color: kTextColorVerde,
+              color: fcolorBtnRegister,
               sizeText: 18,
               fw: FontWeight.w300,
               textColor: Colors.black,
