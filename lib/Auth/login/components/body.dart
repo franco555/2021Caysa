@@ -1,4 +1,5 @@
 import 'package:caysa2021/Auth/components/already_have_an_account_acheck.dart';
+import 'package:caysa2021/Auth/components/forgot_password.dart';
 import 'package:caysa2021/Auth/components/rounded_bottom.dart';
 import 'package:caysa2021/Auth/components/rounded_input_field.dart';
 import 'package:caysa2021/Auth/components/rounded_password_field.dart';
@@ -42,6 +43,7 @@ class Body extends StatelessWidget {
               RoundedPasswordField(
                 onChanged: (value) {},
               ),
+              ForgotPassword(),
               SizedBox(height: 20.0),
               RoundedButton(
                 color: fcolorBtnLogin,
