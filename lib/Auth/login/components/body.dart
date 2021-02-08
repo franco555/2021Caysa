@@ -27,14 +27,15 @@ class Body extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                "LOGIN",
-                style: TextStyle(fontWeight: FontWeight.bold, color: fcolorBtnLogin, fontSize: 30.0),
-              ),
-              SizedBox(height: size.height * 0.03),
+              
               SvgPicture.asset(
                 "assets/logo/logo_and_name_white.svg",
                 height: 150.0,
+              ),
+              SizedBox(height: size.height * 0.03),
+              Text(
+                "LOGIN",
+                style: TextStyle(fontWeight: FontWeight.bold, color: fcolorBtnLogin, fontSize: 30.0),
               ),
               SizedBox(height: size.height * 0.03),
               RoundedInputField(

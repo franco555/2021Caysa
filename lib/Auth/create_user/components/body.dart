@@ -1,13 +1,7 @@
-import 'package:caysa2021/Auth/components/already_have_an_account_acheck.dart';
-import 'package:caysa2021/Auth/components/forgot_password.dart';
 import 'package:caysa2021/Auth/components/rounded_bottom.dart';
 import 'package:caysa2021/Auth/components/rounded_input_field.dart';
 import 'package:caysa2021/Auth/components/rounded_password_field.dart';
-import 'package:caysa2021/Auth/forgotPassword/sc_login.dart';
 import 'package:caysa2021/Auth/login/components/background.dart';
-import 'package:caysa2021/Auth/signup/Sc_SignUp.dart';
-import 'package:caysa2021/Auth/signup/components/or_divider.dart';
-import 'package:caysa2021/Auth/signup/components/social_icon.dart';
 import 'package:caysa2021/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

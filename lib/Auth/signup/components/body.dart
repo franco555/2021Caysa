@@ -1,6 +1,7 @@
 import 'package:caysa2021/Auth/components/already_have_an_account_acheck.dart';
 import 'package:caysa2021/Auth/components/rounded_bottom.dart';
 import 'package:caysa2021/Auth/components/rounded_input_field.dart';
+import 'package:caysa2021/Auth/create_user/sc_login.dart';
 import 'package:caysa2021/Auth/login/sc_login.dart';
 import 'package:caysa2021/Auth/signup/components/background.dart';
 import 'package:caysa2021/Auth/signup/components/or_divider.dart';
@@ -19,18 +20,17 @@ class Body extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 40.0, horizontal: 0.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                "Registrarse",
-               style: TextStyle(fontWeight: FontWeight.bold, color: fcolorBtnLogin, fontSize: 30.0),
-              ),
-              
-              SizedBox(height: size.height * 0.03),
+            children: <Widget>[              
               SvgPicture.asset(
                 "assets/logo/logo_and_name_white.svg",
                 height: 100.0,
               ),
               SizedBox(height:30.0),
+              Text(
+                "Registrarse",
+               style: TextStyle(fontWeight: FontWeight.bold, color: fcolorBtnLogin, fontSize: 30.0),
+              ),              
+              SizedBox(height: size.height * 0.03),
               RoundedInputField(
                 hintText: "Nombres",
                 onChanged: (value) {},
@@ -63,7 +63,16 @@ class Body extends StatelessWidget {
                 color: fcolorBtnRegister,
                  textColor: Colors.black,
                  fw: FontWeight.w500,
-                press: () {},
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return ScCreateUser();
+                      },
+                    ),
+                  );
+                },
               ),
               SizedBox(height: size.height * 0.03),
               AlreadyHaveAnAccountCheck(
