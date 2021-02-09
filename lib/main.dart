@@ -1,5 +1,6 @@
-import 'package:caysa2021/Auth/presentation/components/Sc_BodyPresentation.dart';
 import 'package:caysa2021/constants/constants.dart';
+import 'package:caysa2021/dashBoard/Sc_DashBoard.dart';
+import 'package:caysa2021/dashBoard/test.dart';
 import 'package:flutter/material.dart';
 void main() {
   runApp(MyApp());
@@ -22,7 +23,19 @@ class _MyAppState extends State<MyApp> {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: kThemeBackgroundColor,
       ),
-      home: ScBodyPresentation(),
+      home: ScDashBoard(),
+      routes: <String, WidgetBuilder>{
+        "/dashboard":(BuildContext context)=>new ScTest(),
+        "/compra":(BuildContext context)=>new ScTest(),
+        "/venta":(BuildContext context)=>new ScTest(),
+        "/envio":(BuildContext context)=>new ScTest(),
+        "/recepcion":(BuildContext context)=>new ScTest(),
+        "/devolucion":(BuildContext context)=>new ScTest(),
+        "/pedido":(BuildContext context)=>new ScTest(),
+        "/reporte":(BuildContext context)=>new ScTest(),
+        "/configuracion":(BuildContext context)=>new ScTest(),
+        "/salir":(BuildContext context)=>new ScTest(),
+      },
     );
   }
 }
