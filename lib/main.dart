@@ -1,4 +1,4 @@
-import 'package:caysa2021/constants/constants.dart';
+import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/dashBoard/Sc_DashBoard.dart';
 import 'package:caysa2021/dashBoard/test.dart';
 import 'package:flutter/material.dart';
@@ -20,8 +20,8 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'CAYSA',
       theme: ThemeData(
-        primaryColor: kPrimaryColor,
-        scaffoldBackgroundColor: kThemeBackgroundColor,
+        primaryColor: CFr().getColorFondo(),
+        scaffoldBackgroundColor: CFr().getColorFondo(),
       ),
       home: ScDashBoard(),
       routes: <String, WidgetBuilder>{

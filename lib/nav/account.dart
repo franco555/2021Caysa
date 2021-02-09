@@ -1,3 +1,4 @@
+import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/constants/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class _WgAccountState extends State<WgAccount> {
   Widget build(BuildContext context) {
     return UserAccountsDrawerHeader(
       decoration:BoxDecoration(
-        color: kThemeDetailColor,
+        color: CFr().getColorBarraDeTitulo(),
       )  ,
       accountName: Text("Franco", style: TextStyle(color: fcolorTxt100),), 
       accountEmail: Text("Franco@gmail.com", style: TextStyle(color: fcolorTxt100, fontWeight: FontWeight.w500),),
@@ -21,7 +22,7 @@ class _WgAccountState extends State<WgAccount> {
       ),
       otherAccountsPictures: [
         CircleAvatar(
-          backgroundColor: kThemeBackgroundColor,
+          backgroundColor: CFr().getColorFondo(),
           child: Text("Fr"),
         )
       ],

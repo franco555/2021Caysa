@@ -1,4 +1,4 @@
-import 'package:caysa2021/constants/constants.dart';
+import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -21,7 +21,7 @@ class SocalIcon extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border.all(
             width: 2,
-            color: fcolorBtnLogin,
+            color: CFr().getColorBtnLogin(),
           ),
           shape: BoxShape.circle,
         ),
@@ -29,7 +29,7 @@ class SocalIcon extends StatelessWidget {
           iconSrc,
           height: 20,
           width: 20,
-          color: fcolorBtnLogin,
+          color: CFr().getColorBtnLogin(),
         ),
       ),
     );

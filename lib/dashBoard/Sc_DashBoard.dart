@@ -1,3 +1,4 @@
+import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/constants/constants.dart';
 import 'package:caysa2021/nav/account.dart';
 import 'package:caysa2021/nav/nav.dart';
@@ -20,7 +21,7 @@ class _ScDashBoardState extends State<ScDashBoard> {
       drawer: Drawer(
         child: Container(
           decoration:BoxDecoration(
-            color: kThemeBackgroundColor,
+            color: CFr().getColorFondo(),
           ) ,
           //color: Colors.white70,
           child: ListView(
@@ -47,7 +48,7 @@ class _ScDashBoardState extends State<ScDashBoard> {
               ItemNav(titulo: "Configuración",color: fcolorTxt200,icono: Icons.settings,ruta: "/dashboard",),
               Divider(height: 1,color: fcolorTxt200,),
               SizedBox(height: 15,),
-              ItemNav(titulo: "Salir",color: fcolorTxt200,icono: Icons.settings_power,ruta: "/dashboard",),
+              ItemNav(titulo: "Salir",color: CFr().getColorRojo200(),icono: Icons.settings_power,ruta: "/dashboard",),
             ],
           )
         ),
@@ -70,8 +71,8 @@ class _ScDashBoardState extends State<ScDashBoard> {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors:[
-                  kThemeDetailColor,
-                  kThemeDetailColor,
+                  CFr().getColorBarraDeTitulo(),
+                  CFr().getColorBarraDeTitulo(),
                 ],
                 begin: Alignment.center,
                 end:Alignment.centerRight,

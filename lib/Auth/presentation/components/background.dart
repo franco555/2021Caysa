@@ -1,4 +1,4 @@
-import 'package:caysa2021/constants/constants.dart';
+import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 
 class Background extends StatelessWidget {
@@ -11,7 +11,7 @@ class Background extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(color: kThemeBackgroundColor,
+    return Container(color: CFr().getColorFondo(),
       height: size.height,
       width: double.infinity,
       child: Stack(
@@ -25,7 +25,7 @@ class Background extends StatelessWidget {
                 width: size.width,
                 height:size.height/2,
                 decoration: BoxDecoration(
-                  color: kThemeDetailColor,
+                  color: CFr().getColorBarraDeTitulo(),
                 )
               ),
             ),

@@ -6,7 +6,7 @@ import 'package:caysa2021/Auth/login/sc_login.dart';
 import 'package:caysa2021/Auth/signup/components/background.dart';
 import 'package:caysa2021/Auth/signup/components/or_divider.dart';
 import 'package:caysa2021/Auth/signup/components/social_icon.dart';
-import 'package:caysa2021/constants/constants.dart';
+import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -28,7 +28,7 @@ class Body extends StatelessWidget {
               SizedBox(height:30.0),
               Text(
                 "Registrarse",
-               style: TextStyle(fontWeight: FontWeight.bold, color: fcolorBtnLogin, fontSize: 30.0),
+               style: TextStyle(fontWeight: FontWeight.bold, color: CFr().getColorBtnLogin(), fontSize: 30.0),
               ),              
               SizedBox(height: size.height * 0.03),
               RoundedInputField(
@@ -60,7 +60,7 @@ class Body extends StatelessWidget {
               ),*/
               RoundedButton(
                 text: "SIGNUP",
-                color: fcolorBtnRegister,
+                color: CFr().getColorBtnRegister(),
                  textColor: Colors.black,
                  fw: FontWeight.w500,
                 press: () {

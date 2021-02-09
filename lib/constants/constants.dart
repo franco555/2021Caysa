@@ -6,12 +6,12 @@ const kTextLightColor = Color(0xFFACACAC);
 const kDefaultPaddin = 20.0;
 
 //Login
-const kThemeBackgroundColor = Color(0xFF123E59);
-const kThemeDetailColor = Color(0xFF1C8C8C);
+//const k_ThemeBackgroundColor = Color(0xFF123E59);
+//const k_ThemeDetailColor = Color(0xFF1C8C8C);
 
 //Btn
-const fcolorBtnLogin=Color(0xFF49C6DE);
-const fcolorBtnRegister=Color(0xFF52FA87);
+//const fcolorBtnLogin=Color(0xFF49C6DE);
+//const fcolorBtnRegister=Color(0xFF52FA87);
 const fcolorTextLogin=Color(0xFFB8D9C6);
 
 //txt

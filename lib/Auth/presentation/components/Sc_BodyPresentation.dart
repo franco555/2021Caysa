@@ -2,7 +2,7 @@ import 'package:caysa2021/Auth/components/rounded_bottom.dart';
 import 'package:caysa2021/Auth/login/sc_login.dart';
 import 'package:caysa2021/Auth/presentation/components/background.dart';
 import 'package:caysa2021/Auth/signup/Sc_SignUp.dart';
-import 'package:caysa2021/constants/constants.dart';
+import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -25,7 +25,7 @@ class ScBodyPresentation extends StatelessWidget {
               text:"Iniciar",
               sizeText: 18,
               fw: FontWeight.w400,
-              color: fcolorBtnLogin,
+              color: CFr().getColorBtnLogin(),
               textColor: Colors.white,
               press: () {
                 Navigator.push(
@@ -40,7 +40,7 @@ class ScBodyPresentation extends StatelessWidget {
             ),
             RoundedButton(
               text: "Registrarse",
-              color: fcolorBtnRegister,
+              color: CFr().getColorBtnRegister(),
               sizeText: 18,
               fw: FontWeight.w300,
               textColor: Colors.black,

@@ -1,3 +1,4 @@
+import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/constants/constants.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class WeeklyChart extends StatelessWidget {
               showTitles: true,
               getTitles: getWeek,
               getTextStyles: (value) => const TextStyle(
-                color: fcolorBtnRegister,
+                color: Colors.green,
                 fontSize: 10,
                 fontWeight: FontWeight.w400,
               ),
@@ -43,7 +44,7 @@ getBarGroups() {
               BarChartRodData(
                 y: value,
                 //This is not the proper way, this is just for demo
-                colors: [i == 4 ? kPrimaryColor : fcolorBtnLogin],
+                colors: [i == 4 ? kPrimaryColor : CFr().getColorBtnLogin()],
                 width: 5,
               )
             ],

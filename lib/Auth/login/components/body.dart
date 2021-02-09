@@ -8,7 +8,7 @@ import 'package:caysa2021/Auth/login/components/background.dart';
 import 'package:caysa2021/Auth/signup/Sc_SignUp.dart';
 import 'package:caysa2021/Auth/signup/components/or_divider.dart';
 import 'package:caysa2021/Auth/signup/components/social_icon.dart';
-import 'package:caysa2021/constants/constants.dart';
+import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -35,7 +35,7 @@ class Body extends StatelessWidget {
               SizedBox(height: size.height * 0.03),
               Text(
                 "LOGIN",
-                style: TextStyle(fontWeight: FontWeight.bold, color: fcolorBtnLogin, fontSize: 30.0),
+                style: TextStyle(fontWeight: FontWeight.bold, color: CFr().getColorBtnLogin(), fontSize: 30.0),
               ),
               SizedBox(height: size.height * 0.03),
               RoundedInputField(
@@ -59,7 +59,7 @@ class Body extends StatelessWidget {
               ),
               SizedBox(height: 20.0),
               RoundedButton(
-                color: fcolorBtnLogin,
+                color: CFr().getColorBtnLogin(),
                 fw: FontWeight.w400,
                 sizeText: 16,
                 text: "Iniciar",
