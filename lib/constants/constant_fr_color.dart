@@ -24,6 +24,9 @@ class CFr{
 
   //Azul
   Color getColorAzul500() => ColoresFr(isDark: isDark).colorAzul_500();
+
+  //TextStile
+  TextStyle tsTextTitulo(color,fsize)=>TextStyle(color:color,fontSize: fsize, fontWeight: FontWeight.bold);
   
 }
 

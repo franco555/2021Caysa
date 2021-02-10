@@ -65,12 +65,5 @@ class _ScDashBoardState extends State<ScDashBoard> {
       body: Body(),
     );
   }
-
-  /*PreferredSize customAppBar(titulo){
-    return  PreferredSize(
-        preferredSize: Size.fromHeight(CFr().getHeightNav()),
-        child:new CustomAppBar(tituloNav:titulo),
-      );
-  }*/
 }
 

@@ -5,6 +5,7 @@ const kTextLightColor = Color(0xFFACACAC);
 
 const getPadding20=20.0;
 
+
 //Login
 //const k_ThemeBackgroundColor = Color(0xFF123E59);
 //const k_ThemeDetailColor = Color(0xFF1C8C8C);
