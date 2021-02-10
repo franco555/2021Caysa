@@ -27,8 +27,8 @@ class Body extends StatelessWidget {
                   margin: EdgeInsets.only(top: size.height * 0.3),
                   padding: EdgeInsets.only(
                     top: size.height * 0.12,
-                    left: kDefaultPaddin,
-                    right: kDefaultPaddin,
+                    left: getPadding20,
+                    right: getPadding20,
                   ),
                   // height: 500,
                   decoration: BoxDecoration(
@@ -41,11 +41,11 @@ class Body extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       ColorAndSize(product: product),
-                      SizedBox(height: kDefaultPaddin / 2),
+                      SizedBox(height: getPadding20 / 2),
                       Description(product: product),
-                      SizedBox(height: kDefaultPaddin / 2),
+                      SizedBox(height: getPadding20 / 2),
                       CounterWithFavBtn(),
-                      SizedBox(height: kDefaultPaddin / 2),
+                      SizedBox(height: getPadding20 / 2),
                       AddToCart(product: product)
                     ],
                   ),

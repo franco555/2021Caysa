@@ -4,6 +4,9 @@ class CFr{
   var isDark;
   CFr({this.isDark=false});
 
+  //tamaño de nav
+  double getHeightNav() =>130.0; //->
+
   //
   Color getColorFondo() => ColoresFr(isDark: isDark).colorFondo();//->
   Color getColorBarraDeTitulo() => ColoresFr(isDark: isDark).colorBarraDeTitulo();//->

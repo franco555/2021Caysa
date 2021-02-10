@@ -46,7 +46,7 @@ class _PgDashBoardState extends State<PgDashBoard> {
           ),
           onPressed: () {},
         ),
-        SizedBox(width: kDefaultPaddin / 2),
+        SizedBox(width: getPadding20 / 2),
          /*RaisedButton(
           child: Text('Cerrar Sesión ${authService.user.displayName}'),
           onPressed: () {

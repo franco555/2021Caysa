@@ -1,8 +1,9 @@
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/constants/constants.dart';
 import 'package:caysa2021/nav/account.dart';
-import 'package:caysa2021/nav/nav.dart';
-import 'package:caysa2021/paginas/home/components/body.dart';
+import 'package:caysa2021/nav/itemNav.dart';
+import 'package:caysa2021/dashboard/components/body.dart';
+import 'package:caysa2021/nav/customAppBar.dart';
 import 'package:flutter/material.dart';
 //https://www.youtube.com/watch?v=XBKzpTz65Io
 class ScDashBoard extends StatefulWidget {
@@ -49,99 +50,27 @@ class _ScDashBoardState extends State<ScDashBoard> {
               Divider(height: 1,color: fcolorTxt200,),
               SizedBox(height: 15,),
               ItemNav(titulo: "Salir",color: CFr().getColorRojo200(),icono: Icons.settings_power,ruta: "/dashboard",),
+              SizedBox(height: 20,),
             ],
           )
         ),
       ),
-      appBar: customAppBar(),
+      appBar:CustomAppBar(
+        tituloNav: "DashBoard",
+        tituloSc: "Cortes",
+        subTituloSc: "Alejandro",
+        fecha: "10-12-12",
+        detail: false,
+      ) ,
       body: Body(),
     );
   }
 
-  PreferredSize customAppBar(){
-    return PreferredSize(
-      preferredSize: Size.fromHeight(100),
-      child: AppBar(
-        title: Text("DashBoard"),
-        backgroundColor: Colors.transparent,
-        elevation:0,
-        flexibleSpace: ClipPath(
-          clipper: ClippingNav(),
-          child: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors:[
-                  CFr().getColorBarraDeTitulo(),
-                  CFr().getColorBarraDeTitulo(),
-                ],
-                begin: Alignment.center,
-                end:Alignment.centerRight,
-                tileMode: TileMode.clamp
-              )
-            ),
-          ),
-        ),
-         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.message),
-            color: fcolorTxt100,
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(Icons.notifications_none),
-            color:fcolorTxt100,
-            onPressed: () {},
-          ),
-          SizedBox(width: kDefaultPaddin / 2),
-          
-        ],
-      ),
-    );
-  }
-/*
-  AppBar buildAppBar() {
-    return AppBar(
-      backgroundColor: kThemeDetailColor,
-      elevation: 0,
-      leading: IconButton(
-        icon: Icon(Icons.menu),
-        color: fcolorTxt100,
-        onPressed: () {},
-      ),
-      actions: <Widget>[
-        IconButton(
-          icon: Icon(Icons.message),
-          color: fcolorTxt100,
-          onPressed: () {},
-        ),
-        IconButton(
-          icon: Icon(Icons.notifications_none),
-          color:fcolorTxt100,
-          onPressed: () {},
-        ),
-        SizedBox(width: kDefaultPaddin / 2),
-         
-      ],
-      
-    );
+  /*PreferredSize customAppBar(titulo){
+    return  PreferredSize(
+        preferredSize: Size.fromHeight(CFr().getHeightNav()),
+        child:new CustomAppBar(tituloNav:titulo),
+      );
   }*/
 }
 
-class ClippingNav extends CustomClipper<Path>{
-  @override
-  Path getClip(Size size) {
-    var path = Path();
-    path.lineTo(0, size.height);
-    path.quadraticBezierTo(
-      size.width /30, size.height-50,
-      size.width/6, size.height-50
-      );
-    path.lineTo(size.width, size.height-50);
-    path.lineTo(size.width, 0);
-    path.close();
-    return path;
-  }
-
-  @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
-}
