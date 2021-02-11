@@ -49,7 +49,7 @@ class _ScDashBoardState extends State<ScDashBoard> {
               ItemNav(titulo: "Configuración",color: fcolorTxt200,icono: Icons.settings,ruta: "/dashboard",),
               Divider(height: 1,color: fcolorTxt200,),
               SizedBox(height: 15,),
-              ItemNav(titulo: "Salir",color: CFr().getColorRojo200(),icono: Icons.settings_power,ruta: "/dashboard",),
+              ItemNav(titulo: "Salir",color: CFr().getColorTextBtnSalir(),icono: Icons.settings_power,ruta: "/dashboard",),
               SizedBox(height: 20,),
             ],
           )

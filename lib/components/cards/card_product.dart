@@ -39,9 +39,10 @@ class CardProduct extends StatelessWidget {
                   Column(
                     crossAxisAlignment:CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text( titulo,style: CFr().tsTextTitulo(CFr().getColorFondo(),20.0),),
+                      Text( titulo,style: CFr().tsTextTituloCard(CFr().getColorTextTituloCard(),20.0),),
                       _containerDescription('Estado:', estado),
-                      _containerDescription('P. Unitario:','\$ $precioUnitario')
+                      _containerDescription('P. Unitario:','\$ $precioUnitario'),
+                      _containerDescription('Cantidad: ','$cantidad')
                     ],
                   ),
                 ],
@@ -52,11 +53,26 @@ class CardProduct extends StatelessWidget {
                   Text(
                     '\$ $precioTotal',
                     style: TextStyle(
-                        color: Colors.green,
+                        color: CFr().getColorTextPrecioTotalCard(),
                         fontSize: 24.0,
                         fontWeight: FontWeight.bold),
                   ),
-                  _containerDescription('Cantidad: ','$cantidad')
+
+                  SizedBox(height: 5,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(Icons.edit, color: CFr().getColorIconoEditar(),),
+                      ),
+                      Container(width: 1,height: 25,color: Colors.black26,),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(Icons.remove_circle_outline, color: CFr().getColorTextBtnSalir(),),
+                      ),
+                    ],
+                  )
                 ],
               )
             ],
