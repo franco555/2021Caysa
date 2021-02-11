@@ -38,7 +38,7 @@ class _ScDashBoardState extends State<ScDashBoard> {
               Divider(height: 1,color: fcolorTxt200,),
               ItemNav(titulo: "Envio",color: fcolorTxt200,icono: Icons.send_outlined,ruta: "/dashboard",),
               Divider(height: 1,color: fcolorTxt200,),
-              ItemNav(titulo: "Recepción",color: fcolorTxt200,icono: Icons.how_to_vote_outlined,ruta: "/dashboard",),
+              ItemNav(titulo: "Recepción",color: fcolorTxt200,icono: Icons.how_to_vote_outlined,ruta: "/recepcion",),
               Divider(height: 1,color: fcolorTxt200,),
               ItemNav(titulo: "Devolución",color: fcolorTxt200,icono: Icons.settings_backup_restore,ruta: "/dashboard",),
               Divider(height: 1,color: fcolorTxt200,),

@@ -1,4 +1,3 @@
-import 'package:caysa2021/components/cards/card_product.dart';
 import 'package:caysa2021/components/other/separadorH.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/nav/customAppBar.dart';
@@ -30,70 +29,7 @@ class _ScTestState extends State<ScTest> {
                     color: CFr().getColorBtnLogin(),
                     fsize: 18.0,
                   ),
-                  CardProduct(
-                    imagen: 'assets/logo/logo_white.png',
-                    titulo: "Unicornio",
-                    precioUnitario: 50.0,
-                    cantidad: 21.0,
-                    estado: "Terminado",
-                    precioTotal: 150.0,
-                  ),
-                  CardProduct(
-                    imagen: 'assets/logo/logo_white.png',
-                    titulo: "Unicornio",
-                    precioUnitario: 50.0,
-                    cantidad: 21.0,
-                    estado: "Terminado",
-                    precioTotal: 150.0,
-                  ),
-                  CardProduct(
-                    imagen: 'assets/logo/logo_white.png',
-                    titulo: "Unicornio",
-                    precioUnitario: 50.0,
-                    cantidad: 21.0,
-                    estado: "Terminado",
-                    precioTotal: 150.0,
-                  ),
-                  CardProduct(
-                    imagen: 'assets/logo/logo_white.png',
-                    titulo: "Unicornio",
-                    precioUnitario: 50.0,
-                    cantidad: 21.0,
-                    estado: "Terminado",
-                    precioTotal: 150.0,
-                  ),
-                  CardProduct(
-                    imagen: 'assets/logo/logo_white.png',
-                    titulo: "Unicornio",
-                    precioUnitario: 50.0,
-                    cantidad: 21.0,
-                    estado: "Terminado",
-                    precioTotal: 150.0,
-                  ),
-                  CardProduct(
-                    imagen: 'assets/logo/logo_white.png',
-                    titulo: "Unicornio",
-                    precioUnitario: 50.0,
-                    cantidad: 21.0,
-                    estado: "Terminado",
-                    precioTotal: 150.0,
-                  ),
-                  CardProduct(
-                    imagen: 'assets/logo/logo_white.png',
-                    titulo: "Unicornio",
-                    precioUnitario: 50.0,
-                    cantidad: 21.0,
-                    estado: "Terminado",
-                    precioTotal: 150.0,
-                  ),
-                  CardProduct(
-                    imagen: 'assets/logo/logo_white.png',
-                    titulo: "Unicornio",
-                    precioUnitario: 50.0,
-                    cantidad: 21.0,
-                    estado: "Terminado",
-                    precioTotal: 150.0,
-                  ),
+                 
                 ],
               ),
             )
