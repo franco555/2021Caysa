@@ -3,6 +3,7 @@ import 'package:caysa2021/dashBoard/Sc_DashBoard.dart';
 import 'package:caysa2021/dashBoard/test.dart';
 import 'package:caysa2021/received/sc_received.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 void main() {
   runApp(MyApp());
 }
@@ -17,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'CAYSA',
       theme: ThemeData(
