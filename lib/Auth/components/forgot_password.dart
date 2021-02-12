@@ -1,4 +1,4 @@
-import 'package:caysa2021/constants/constants.dart';
+import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPassword extends StatelessWidget {
@@ -21,7 +21,7 @@ class ForgotPassword extends StatelessWidget {
             child: Text(
               "¿Olvidaste la contraseña?",
               style: TextStyle(
-                color: fcolorTxt100,
+                color: CFr().getColorTextNavBar(),
                 fontWeight: FontWeight.w300,
               ),
             ),

@@ -18,6 +18,7 @@ class CFr{
   Color getColorTextTituloCard()=>ColoresFr(isDark: isDark).colorTextTituloCard();// ->
   Color getColorTextPrecioTotalCard()=>ColoresFr(isDark: isDark).colorTextPrecioTotalCard();
   Color getColorTextBtnSalir() => ColoresFr(isDark: isDark).colorTextBtnSalir();//->
+  Color getColorTextNavBar() => ColoresFr(isDark: isDark).colorTextNavBar();//->
 
   //icono
   Color getColorIconoEditar() => ColoresFr(isDark: isDark).colorIconoEditar();//->
@@ -54,6 +55,8 @@ class ColoresFr{
   Color colorTextTituloCard()=>isDark ? color0Drark : _colorFondo;
   Color colorTextPrecioTotalCard()=>isDark ? color0Drark : _verde_500;
   Color colorTextBtnSalir()=>isDark ? color0Drark : _rojo_200;
+  Color colorTextNavBar()=>isDark ? color0Drark : _verde_100;
+  
 
   Color colorIconoEditar()=>isDark ? color0Drark : _azul_400;
 
@@ -83,7 +86,7 @@ class ColoresFr{
   Color _azul_400=Color(0Xff44BFCA);
   Color _azul_500=Color(0Xff1980FF);
   
- // Color _verde_100=Color(0XffBCFFDF);
+  Color _verde_100=Color(0XFFCCFBFC);  
   Color _verde_500=Color(0Xff32CD32);
 
   Color color0Drark=Colors.grey[850];

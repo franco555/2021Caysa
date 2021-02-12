@@ -16,7 +16,7 @@ const getPadding20=20.0;
 const fcolorTextLogin=Color(0xFFB8D9C6);
 
 //txt
-const fcolorTxt100=Color(0xFFCCFBFC);
+//const fcolorTxt100_=Color(0xFFCCFBFC);
 const fcolorTxt200=Color(0xFFBBE6AE);
 const fcolorTxt900=Color(0xFF0377A5);
 

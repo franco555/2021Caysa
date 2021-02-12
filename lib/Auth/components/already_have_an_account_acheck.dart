@@ -1,4 +1,4 @@
-import 'package:caysa2021/constants/constants.dart';
+import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 
 class AlreadyHaveAnAccountCheck extends StatelessWidget {
@@ -17,7 +17,7 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
       children: <Widget>[
         Text(
           login ? "¿No tienes una cuenta? " : "¿Tienes una cuenta? ",
-          style: TextStyle(color: fcolorTxt100),
+          style: TextStyle(color: CFr().getColorTextNavBar()),
         ),
         SizedBox(width:5),
         GestureDetector(
@@ -25,7 +25,7 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
           child: Text(
             login ? "Crear" : "Iniciar",
             style: TextStyle(
-              color: fcolorTxt100,
+              color: CFr().getColorTextNavBar(),
               fontWeight: FontWeight.bold,
             ),
           ),

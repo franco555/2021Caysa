@@ -50,8 +50,8 @@ class CustomAppBar extends StatelessWidget with  PreferredSizeWidget{
           ),
         ),
          actions: <Widget>[
-          BtnAction( icono:Icons.message, color: fcolorTxt100,fn:(){}),
-          BtnAction( icono:Icons.notifications_none, color:fcolorTxt100,fn:(){}),
+          BtnAction( icono:Icons.message, color: CFr().getColorTextNavBar(),fn:(){}),
+          BtnAction( icono:Icons.notifications_none, color:CFr().getColorTextNavBar(),fn:(){}),
           SizedBox(width: getPadding20 / 2),
         ],
         bottom: PreferredSize(

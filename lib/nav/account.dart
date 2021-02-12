@@ -14,8 +14,8 @@ class _WgAccountState extends State<WgAccount> {
       decoration:BoxDecoration(
         color: CFr().getColorBarraDeTitulo(),
       )  ,
-      accountName: Text("Franco", style: TextStyle(color: fcolorTxt100),), 
-      accountEmail: Text("Franco@gmail.com", style: TextStyle(color: fcolorTxt100, fontWeight: FontWeight.w500),),
+      accountName: Text("Franco", style: TextStyle(color: CFr().getColorTextNavBar()),), 
+      accountEmail: Text("Franco@gmail.com", style: TextStyle(color: CFr().getColorTextNavBar(), fontWeight: FontWeight.w500),),
       currentAccountPicture: CircleAvatar(
         backgroundColor: fcolorTxt200,
         backgroundImage: AssetImage("assets/logo/logo_white.png"),

@@ -1,3 +1,4 @@
+import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/constants/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,7 @@ class DetailAppBar extends StatelessWidget {
           child: Text(tituloSc,style: TextStyle(color:Colors.black, fontSize: 14, fontWeight: FontWeight.w500),),
         ),                
         Text(subTituloSc,style: TextStyle(color: fcolorTxt200, fontSize: 22, fontWeight: FontWeight.w500),),
-        Text(fecha,style: TextStyle(color: fcolorTxt100, fontSize: 10, fontWeight: FontWeight.w500),)
+        Text(fecha,style: TextStyle(color: CFr().getColorTextNavBar(), fontSize: 10, fontWeight: FontWeight.w500),)
       ],
     );
   }
