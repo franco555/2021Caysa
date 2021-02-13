@@ -23,6 +23,8 @@ class CFr{
   //icono
   Color getColorIconoEditar() => ColoresFr(isDark: isDark).colorIconoEditar();//->
   
+  Color getColorLinea() => ColoresFr(isDark: isDark).colorLinea();//->
+  Color getColorLinea600() => ColoresFr(isDark: isDark).colorLinea600();//->
   
   //Rojo
   Color getColorRojo100() => ColoresFr(isDark: isDark).colorRojo_100();
@@ -57,6 +59,9 @@ class ColoresFr{
   Color colorTextBtnSalir()=>isDark ? color0Drark : _rojo_200;
   Color colorTextNavBar()=>isDark ? color0Drark : _verde_100;
   
+  //color de linea
+  Color colorLinea()=>isDark ? color0Drark : _gris;
+  Color colorLinea600()=>isDark ? color0Drark : _gris600;
 
   Color colorIconoEditar()=>isDark ? color0Drark : _azul_400;
 
@@ -90,4 +95,6 @@ class ColoresFr{
   Color _verde_500=Color(0Xff32CD32);
 
   Color color0Drark=Colors.grey[850];
+  Color _gris=Colors.grey[300];
+  Color _gris600=Colors.grey[600];
 }

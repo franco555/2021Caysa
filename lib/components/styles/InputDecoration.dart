@@ -16,3 +16,15 @@ InputDecoration buildInputDecorations(String hinttext) {
     ),
   );
 }
+
+BoxDecoration lineaHorizontal(Color color){
+  return BoxDecoration(
+    border: Border(
+          bottom: BorderSide(
+            color: color,
+            width: 1
+          )
+        )
+  );
+}
+

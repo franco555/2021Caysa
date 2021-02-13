@@ -1,5 +1,23 @@
-//import 'package:flutter/material.dart';
+String validateNumero(String value) {
+    if (value.length == 0) {
+      return "Ingrese cantidad";
+    }
+    return null;
+  }
+  String validatePrecio(String value) {
+    if (value.length == 0) {
+      return "Ingrese precio unidad";
+    }
+    return null;
+  }
 
+  String validatePrecioTotal(String value) {
+    if (value.length == 0) {
+      return "Ingrese precio total";
+    }
+    return null;
+  }
+  
 /*String validateName(String value) {
  String pattern = r'(^[a-zA-Z ]*$)';
  RegExp regExp = new RegExp(pattern);

@@ -12,6 +12,7 @@ class CustomAppBar extends StatelessWidget with  PreferredSizeWidget{
   final String subTituloSc;
   final String fecha;
   final bool detail;
+  final List<Widget> widget;
 
   const CustomAppBar({
     Key key,
@@ -20,6 +21,7 @@ class CustomAppBar extends StatelessWidget with  PreferredSizeWidget{
     this.subTituloSc,
     this.fecha,
     this.detail=false,
+    this.widget
   }) : super(key: key);
 
   Size get preferredSize => Size.fromHeight(CFr().getHeightNav());
@@ -49,11 +51,12 @@ class CustomAppBar extends StatelessWidget with  PreferredSizeWidget{
             ),
           ),
         ),
-         actions: <Widget>[
+        actions: widget,
+         /*actions: <Widget>[
           BtnAction( icono:Icons.message, color: CFr().getColorTextNavBar(),fn:(){}),
           BtnAction( icono:Icons.notifications_none, color:CFr().getColorTextNavBar(),fn:(){}),
           SizedBox(width: getPadding20 / 2),
-        ],
+        ],*/
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(40),
           child: Container(

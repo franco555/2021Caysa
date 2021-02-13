@@ -1,38 +1,35 @@
-import 'package:caysa2021/components/other/imgenCirculo.dart';
+import 'package:caysa2021/components/styles/inputDecoration.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 
 class TituloFormulario extends StatelessWidget {
-  final String imagen;
   final String titulo;
   final String subTitulo;
+  final double ancho;
   const TituloFormulario({
     Key key,
-    this.imagen,
     this.titulo,
     this.subTitulo,
+    this.ancho,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        ImagenCirculo(
-          imagen:imagen ,
-          color:CFr().getColorTextNavBar(),
-          size: 68.0,
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+    return Padding(
+      padding: const EdgeInsets.only(left: 15, right: 15,top: 25, bottom: 15),
+      child:Container(
+        width: ancho,
+        padding: EdgeInsets.symmetric(vertical: 10),
+        decoration: lineaHorizontal(CFr().getColorLinea600()),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(titulo,style: TextStyle(fontSize: 24),),
             Text(subTitulo,style: TextStyle(fontSize: 14),),
           ],
-        )
-      ],
+        ),
+      ),
     );
   }
 }

@@ -1,7 +1,8 @@
 import 'package:caysa2021/components/buttoms/btnForm.dart';
 import 'package:caysa2021/components/inputs/dropDownList.dart';
 import 'package:caysa2021/components/inputs/textFormFieldWithIcon.dart';
-import 'package:caysa2021/components/other/tituloFormulario.dart';
+import 'package:caysa2021/components/other/tituloFormularioWithImagen.dart';
+import 'package:caysa2021/components/other/validation.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -46,7 +47,7 @@ class _ModalFormSendState extends State<ModalFormSend> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              TituloFormulario(
+              TituloFormularioWhithImagen(
                 imagen: "assets/logo/altopro.png",
                 titulo: "Fernando Calderon ${_precio.text}",
                 subTitulo: "Agregando nuevo envío ${_cantidad.text}",
@@ -98,6 +99,7 @@ class _ModalFormSendState extends State<ModalFormSend> {
                   //DatePickerGeneric()
                 ]),
               ),
+              SizedBox(height: 20,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -127,29 +129,7 @@ class _ModalFormSendState extends State<ModalFormSend> {
     }
   }
 
-  String validateNumero(String value) {
-    /*String patttern = r'(^[0-9]*$)';
-    RegExp regExp = new RegExp(patttern);
-    print(regExp.hasMatch(value));*/
-
-    if (value.length == 0) {
-      return "Ingrese cantidad";
-    }
-    return null;
-  }
-  String validatePrecio(String value) {
-    if (value.length == 0) {
-      return "Ingrese precio unidad";
-    }
-    return null;
-  }
-
-  String validatePrecioTotal(String value) {
-    if (value.length == 0) {
-      return "Ingrese precio total";
-    }
-    return null;
-  }
+  
 
   format(double numero){
     final oCcy = new NumberFormat("#,##0.00", "en_US");

@@ -25,7 +25,7 @@ class SeparadorHorizontal extends StatelessWidget {
               //color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(.05),
+                  color: Colors.transparent,
                   blurRadius: 8,
                   spreadRadius: 3,
                   offset: Offset(0, 10),
