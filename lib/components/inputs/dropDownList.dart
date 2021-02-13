@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 
 class DropDownListGeneric extends StatefulWidget {
 
+  final String titulo;
+  const DropDownListGeneric({
+    Key key,
+    this.titulo,
+  }) : super(key: key);
+
   @override
   _DropDownListGenericState createState() => _DropDownListGenericState();
 }
@@ -28,7 +34,7 @@ class _DropDownListGenericState extends State<DropDownListGeneric> {
               )
         ),
         child: DropdownButton(
-          hint: Text("Seleccione",style: TextStyle(fontSize: 16.0),),
+          hint: Text(widget.titulo,style: TextStyle(fontSize: 16.0),),
           dropdownColor: Colors.white,
           icon: Icon(Icons.arrow_drop_down),
           iconSize: 30,

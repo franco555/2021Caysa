@@ -4,13 +4,11 @@ import 'package:flutter/material.dart';
 class TextFormFieldGeneric extends StatefulWidget {
 
   final String nombre;
-  final IconData icono;
   final Function validacion;
   final Function guardar;
   const TextFormFieldGeneric({
     Key key,
     this.nombre,
-    this.icono,
     this.validacion,
     this.guardar
   }) : super(key: key);
@@ -26,7 +24,7 @@ class _TextFormFieldGenericState extends State<TextFormFieldGeneric> {
       padding: const EdgeInsets.only(bottom:15,left: 10,right: 10),
       child: TextFormField(
         keyboardType: TextInputType.text,
-        decoration: buildInputDecoration(widget.icono,widget.nombre),
+        decoration: buildInputDecorations(widget.nombre),
         validator: widget.validacion,
         onSaved: widget.guardar,
       ),

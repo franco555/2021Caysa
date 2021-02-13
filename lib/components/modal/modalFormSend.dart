@@ -1,8 +1,10 @@
+import 'package:caysa2021/components/buttoms/btnForm.dart';
 import 'package:caysa2021/components/inputs/dropDownList.dart';
-import 'package:caysa2021/components/inputs/textFormField.dart';
+import 'package:caysa2021/components/inputs/textFormFieldWithIcon.dart';
 import 'package:caysa2021/components/other/tituloFormulario.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class ModalFormSend extends StatefulWidget {
 
@@ -27,6 +29,10 @@ class _ModalFormSendState extends State<ModalFormSend> {
   TextEditingController password = TextEditingController();
   TextEditingController confirmpassword = TextEditingController();
 
+  TextEditingController _cantidad = TextEditingController();
+  TextEditingController _precio = TextEditingController();
+  TextEditingController _precioTotal = TextEditingController();
+
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
 
   @override
@@ -35,14 +41,15 @@ class _ModalFormSendState extends State<ModalFormSend> {
     return Container(
           height: size.height,
           decoration: BoxDecoration(color: Colors.white,),
+          padding: EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               TituloFormulario(
                 imagen: "assets/logo/altopro.png",
-                titulo: "Formulario de envio",
-                subTitulo: "Detalles de envio",
+                titulo: "Fernando Calderon ${_precio.text}",
+                subTitulo: "Agregando nuevo envío ${_cantidad.text}",
               ),
               
               Form(
@@ -53,38 +60,101 @@ class _ModalFormSendState extends State<ModalFormSend> {
                   SizedBox(
                     height: 15,
                   ),
-                  TextFormFieldGeneric(
+                  /*TextFormFieldWithIconGeneric(
                     nombre: "Nombre",
                     icono: Icons.person,
                     validacion: (String value){if(value.isEmpty){ return 'Ingrese Nombre';}return null;},
                     guardar: (String value){name = value;} ,
+                  ),*/
+                  DropDownListGeneric(titulo: "Preceso",),
+                  DropDownListGeneric(titulo: "Producto",),
+                  TextFormFieldWithIconGeneric(
+                    icono: Icons.monetization_on,
+                    nombre: "Precio Unidad",
+                    placeholder: "\$/ 00.0",
+                    isNum:true,
+                    controller: _precio,
+                    guardar:(value){_precio=value;},
+                    validacion:validatePrecio,
                   ),
-                  TextFormFieldGeneric(
-                    nombre: "Apellido",
-                    icono: Icons.person,
-                    validacion: (String value){if(value.isEmpty){ return 'Ingrese Apelldio';}return null;},
-                    guardar: (String value){name = value;} ,
+                  TextFormFieldWithIconGeneric(
+                    icono: Icons.format_list_numbered_sharp,
+                    nombre: "Cantidad",
+                    placeholder: "0",
+                    isNum:true,
+                    controller: _cantidad,
+                    guardar:(value){_cantidad = value;},
+                    validacion: validateNumero,
                   ),
-                  DropDownListGeneric()
+                  TextFormFieldWithIconGeneric(
+                    icono: Icons.monetization_on_outlined,
+                    nombre: "Total",
+                    placeholder:  "\$/ 00.0",
+                    isNum:true,
+                    controller: _precioTotal,
+                    guardar:(value){_precioTotal =value;},
+                    validacion: validatePrecioTotal,
+                  ),
+                  //DatePickerGeneric()
                 ]),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [                  
-                  IconButton(
-                    icon: Icon(Icons.check), 
+                children: [
+                  BtnForm(
+                    texto:"Guardar" ,
                     color: CFr().getColorTextPrecioTotalCard(),
-                    onPressed: widget.fn
+                    icono: Icons.save,
+                    fn: (){ save();},
                   ),
-                  IconButton(
-                    icon: Icon(Icons.close), 
+                  BtnForm(
+                    texto:"Cancelar" ,
                     color: CFr().getColorTextBtnSalir(),
-                    onPressed:  () => Navigator.of(context).pop(),
+                    icono: Icons.close,
+                    fn: () => Navigator.of(context).pop(),
                   ),
                 ],
               )
             ],
           ),
     );
+  }
+
+  save() {
+    if (_formkey.currentState.validate()) {
+      print("Cantidad $_cantidad");
+      //_formkey.currentState.reset();
+    }
+  }
+
+  String validateNumero(String value) {
+    /*String patttern = r'(^[0-9]*$)';
+    RegExp regExp = new RegExp(patttern);
+    print(regExp.hasMatch(value));*/
+
+    if (value.length == 0) {
+      return "Ingrese cantidad";
+    }
+    return null;
+  }
+  String validatePrecio(String value) {
+    if (value.length == 0) {
+      return "Ingrese precio unidad";
+    }
+    return null;
+  }
+
+  String validatePrecioTotal(String value) {
+    if (value.length == 0) {
+      return "Ingrese precio total";
+    }
+    return null;
+  }
+
+  format(double numero){
+    final oCcy = new NumberFormat("#,##0.00", "en_US");
+    final result=oCcy.format(numero);
+    print(result);
+    return result;
   }
 }
