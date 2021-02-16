@@ -58,7 +58,7 @@ class CardProductosOfProceso extends StatelessWidget {
                         fontSize: 12.0,
                         fontWeight: FontWeight.w400),
                   ),
-                  Text('$stock', style: TextStyle(color: CFr().getColorAzul500(),fontSize: 24.0,),
+                  Text('$stock', style: TextStyle(color: CFr().getColorAzul300(),fontSize: 24.0,),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),

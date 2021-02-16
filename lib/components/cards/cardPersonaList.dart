@@ -1,12 +1,16 @@
+import 'package:caysa2021/components/styles/inputDecoration.dart';
 import 'package:flutter/material.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/components/imagen/imagenCardGeneric.dart';
 import 'package:caysa2021/components/labels/labelCardGeneric.dart';
-import 'package:caysa2021/components/buttoms/btnAction.dart';
 
 class CarPersonaList extends StatelessWidget {
   final String imagen;
   final String titulo;
+  final String fecha;
+  final Color colorFondo;
+  final Color colorText;
+  final Color colorLinea;
   final String estado;
   final bool colorSuccess;
   final String proceso;
@@ -17,6 +21,10 @@ class CarPersonaList extends StatelessWidget {
     Key key,
     this.imagen,
     this.titulo,
+    this.fecha,
+    this.colorFondo,
+    this.colorText,
+    this.colorLinea,
     this.estado,
     this.colorSuccess=true,
     this.proceso,
@@ -27,9 +35,7 @@ class CarPersonaList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-      color: Colors.white,
-      ),
+      decoration:lineaHorizontalBottom(colorLinea,colorFondo),
       margin:EdgeInsets.fromLTRB(0, 0, 0, 1) ,
       padding:EdgeInsets.only(right: 20, top: 10.0, bottom: 10.0),
       child: Column(
@@ -43,16 +49,21 @@ class CarPersonaList extends StatelessWidget {
                   Column(
                     crossAxisAlignment:CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text( titulo,style: CFr().tsTextTituloCard(CFr().getColorTextTituloCard(),20.0),),
+                      Text( titulo,style: CFr().tsTextTituloCard(colorText,20.0),),
                       LabelCardGeneric(
                         label: 'Proceso: ',
                         texto: proceso ,
-                        color: Colors.black,
+                        color: colorText,
                       ),
                       LabelCardGeneric(
                         label: 'Estado: ',
                         texto: estado ,
-                        color: colorSuccess ? CFr().getColorTextPrecioTotalCard():CFr().getColorTextBtnSalir() ,
+                        color: colorSuccess ? colorText:CFr().getColorTextBtnSalir() ,
+                      ),
+                      LabelCardGeneric(
+                        label: 'Fecha: ',
+                        texto: fecha ,
+                        color: colorSuccess ? colorText:CFr().getColorTextBtnSalir() ,
                       ),
                     ],
                   ),
@@ -60,28 +71,19 @@ class CarPersonaList extends StatelessWidget {
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Text(
-                    '\$ $precioTotal',
+                  Text('\$ $precioTotal',
                     style: TextStyle(
                         color: CFr().getColorTextPrecioTotalCard(),
                         fontSize: 24.0,
                         fontWeight: FontWeight.bold),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(3.0),
-                        child: 
-                        BtnAction(
-                          icono:Icons.more_horiz, 
-                          size: 18,
-                          color: CFr().getColorIconoEditar(),
-                          fn:fn,),
-                      ),
-                    ],
-                  )
+                  SizedBox(height: 10,),
+                  InkWell(
+                    child: Text("Detalles", style: TextStyle(fontSize: 14,color:colorText,decoration:TextDecoration.underline,),),
+                    onTap: fn,
+                  ),
                 ],
               )
             ],

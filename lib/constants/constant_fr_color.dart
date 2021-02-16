@@ -5,7 +5,8 @@ class CFr{
   CFr({this.isDark=false});
 
   //tamaño de nav
-  double getHeightNav() =>140.0; //->
+  double getAltoAppBar14() =>140.0; //->
+  double getAltoAppBar12() =>120.0; //->
 
   //
   Color getColorFondo() => ColoresFr(isDark: isDark).colorFondo();//->
@@ -25,6 +26,7 @@ class CFr{
   
   Color getColorLinea() => ColoresFr(isDark: isDark).colorLinea();//->
   Color getColorLinea600() => ColoresFr(isDark: isDark).colorLinea600();//->
+  Color getColorLineaDown() => ColoresFr(isDark: isDark).colorLineaDow();//->
   
   //Rojo
   Color getColorRojo100() => ColoresFr(isDark: isDark).colorRojo_100();
@@ -34,7 +36,7 @@ class CFr{
   Color getColorRojo600() => ColoresFr(isDark: isDark).colorRojo_600();
 
   //Azul
-  Color getColorAzul500() => ColoresFr(isDark: isDark).colorAzul_500();
+  Color getColorAzul300() => ColoresFr(isDark: isDark).colorAzul_300();
 
   //TextStile
   TextStyle tsTextTituloCard(color,fsize)=>TextStyle(color:color,fontSize: fsize, fontWeight: FontWeight.bold);
@@ -58,12 +60,13 @@ class ColoresFr{
   Color colorTextPrecioTotalCard()=>isDark ? color0Drark : _verde_500;
   Color colorTextBtnSalir()=>isDark ? color0Drark : _rojo_200;
   Color colorTextNavBar()=>isDark ? color0Drark : _verde_100;
-  
+
   //color de linea
   Color colorLinea()=>isDark ? color0Drark : _gris;
   Color colorLinea600()=>isDark ? color0Drark : _gris600;
+  Color colorLineaDow()=>isDark ? color0Drark : _colorLineaDown;
 
-  Color colorIconoEditar()=>isDark ? color0Drark : _azul_400;
+  Color colorIconoEditar()=>isDark ? color0Drark : _azul_300;
 
   Color colorRojo_100()=>isDark ? color0Drark : rojo_100;
   Color colorRojo_300()=>isDark ? color0Drark : rojo_300;
@@ -71,12 +74,16 @@ class ColoresFr{
   Color colorRojo_500()=>isDark ? color0Drark : rojo_500;
   Color colorRojo_600()=>isDark ? color0Drark : rojo_600;
 
+  Color colorAzul_300()=>isDark ? color0Drark : _azul_300; //->
+
   //variables
   Color _colorFondo=Color(0xFF123E59);
   Color _colorBarraDeTitulo=Color(0xFF1C8C8C);
 
   Color _colorBtnLogin=Color(0xFF49C6DE);
   Color _colorBtnRegister=Color(0xFF52FA87);
+
+  Color _colorLineaDown=Color(0xFF0d2c3f);
 
 
   Color rojo_100=Color(0XffF2B6C1);
@@ -86,13 +93,10 @@ class ColoresFr{
   Color rojo_500=Color(0XffF23747);
   Color rojo_600=Color(0XffBF3944);
 
-  Color colorAzul_500()=>isDark ? color0Drark : _azul_500;
-
-  Color _azul_400=Color(0Xff44BFCA);
-  Color _azul_500=Color(0Xff1980FF);
+  Color _azul_300=Color(0xFF1ADFFF);
   
   Color _verde_100=Color(0XFFCCFBFC);  
-  Color _verde_500=Color(0Xff32CD32);
+  Color _verde_500=Color(0xFF3DFF7B);
 
   Color color0Drark=Colors.grey[850];
   Color _gris=Colors.grey[300];

@@ -20,7 +20,7 @@ class TituloFormulario extends StatelessWidget {
       child:Container(
         width: ancho,
         padding: EdgeInsets.symmetric(vertical: 10),
-        decoration: lineaHorizontalBottom(CFr().getColorTextNavBar()),
+        decoration: lineaHorizontalBottom(CFr().getColorTextNavBar(),CFr().getColorTextNavBar()),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,

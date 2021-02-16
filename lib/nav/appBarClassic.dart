@@ -17,7 +17,7 @@ class AppBarClassic extends StatelessWidget with  PreferredSizeWidget{
     this.btnAppBar
   }) : super(key: key);
 
-  Size get preferredSize => Size.fromHeight(CFr().getHeightNav());
+  Size get preferredSize => Size.fromHeight(CFr().getAltoAppBar14());
 
   @override
   Widget build(BuildContext context) {

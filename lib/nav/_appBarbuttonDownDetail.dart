@@ -1,5 +1,4 @@
 import 'package:caysa2021/constants/constant_fr_color.dart';
-import 'package:caysa2021/constants/constants.dart';
 import 'package:caysa2021/components/buttoms/iconoWithNombreInVertical.dart';
 import 'package:flutter/material.dart';
 

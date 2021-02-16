@@ -18,13 +18,9 @@ class LabelCardGeneric extends StatelessWidget {
       margin: EdgeInsets.only(top: 5.0),
       child: Row(
         children: [
-          Text(label,),
+          Text(label, style: TextStyle(color:color)),
           SizedBox(width: 5,),
-          Text(texto, 
-            style: TextStyle(
-              fontWeight: FontWeight.w500, 
-              color:color),
-          ),
+          Text(texto,  style: TextStyle( fontWeight: FontWeight.w500,color:color),),
         ],
       ),
     );
