@@ -42,8 +42,8 @@ class CardProductosOfProceso extends StatelessWidget {
                     crossAxisAlignment:CrossAxisAlignment.start,
                     children: <Widget>[
                       Text( titulo,style: CFr().tsTextTituloCard(CFr().getColorTextTituloCard(),20.0),),
-                      LabelCardGeneric(label: 'Estado:', texto:estado , color:Colors.black ,),
-                      LabelCardGeneric(label: 'P. Unitario:', texto:'\$ $precioUnitario' , color:Colors.black ,)
+                      LabelCardGeneric(label: 'Estado:', texto:estado , colorLabel:Colors.black ,colorTexto:Colors.black,),
+                      LabelCardGeneric(label: 'P. Unitario:', texto:'\$ $precioUnitario' , colorLabel:Colors.black ,colorTexto:Colors.black,)
                     ],
                   ),
                 ],

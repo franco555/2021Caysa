@@ -38,6 +38,12 @@ class CFr{
   //Azul
   Color getColorAzul300() => ColoresFr(isDark: isDark).colorAzul_300();
 
+  //Colores Genericos
+  Color getColorSuccess() => ColoresFr(isDark: isDark).colorTextPrecioTotalCard();
+  Color getColorWarning() => ColoresFr(isDark: isDark).colorAmarillo_300();
+  Color getColorDanger() => ColoresFr(isDark: isDark).colorTextBtnSalir();
+  Color getColorInfo() => ColoresFr(isDark: isDark).colorAzul_300();
+
   //TextStile
   TextStyle tsTextTituloCard(color,fsize)=>TextStyle(color:color,fontSize: fsize, fontWeight: FontWeight.bold);
   
@@ -75,6 +81,8 @@ class ColoresFr{
   Color colorRojo_600()=>isDark ? color0Drark : rojo_600;
 
   Color colorAzul_300()=>isDark ? color0Drark : _azul_300; //->
+
+  Color colorAmarillo_300()=>isDark ? color0Drark : Color(0xffFFF948); //->
 
   //variables
   Color _colorFondo=Color(0xFF123E59);

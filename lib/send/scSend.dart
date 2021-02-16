@@ -56,12 +56,13 @@ class _ScSendState extends State<ScSend> {
                     colorText: CFr().getColorTextNavBar(),
                     colorLinea: CFr().getColorLineaDown(),
                     proceso:"Costura",
-                    estado: "Completo",
+                    estado: "Enviado",
                     fecha:"12/12/12",
                     colorSuccess: true,
                     precioTotal: 150.0,
                     fn: ()=>{Navigator.of(context).pushNamed("/detail_recepcion"),},
                   ),
+                  
                   
                 ],
               ),

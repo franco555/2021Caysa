@@ -53,17 +53,20 @@ class CarPersonaList extends StatelessWidget {
                       LabelCardGeneric(
                         label: 'Proceso: ',
                         texto: proceso ,
-                        color: colorText,
+                        colorLabel: colorText,
+                        colorTexto: colorText,
                       ),
                       LabelCardGeneric(
                         label: 'Estado: ',
                         texto: estado ,
-                        color: colorSuccess ? colorText:CFr().getColorTextBtnSalir() ,
+                        colorLabel: colorText,
+                        colorTexto: colorSuccess ? CFr().getColorTextPrecioTotalCard():CFr().getColorTextBtnSalir() ,
                       ),
                       LabelCardGeneric(
                         label: 'Fecha: ',
                         texto: fecha ,
-                        color: colorSuccess ? colorText:CFr().getColorTextBtnSalir() ,
+                        colorLabel: colorText,
+                        colorTexto: colorText,
                       ),
                     ],
                   ),

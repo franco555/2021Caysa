@@ -3,13 +3,15 @@ import 'package:flutter/material.dart';
 class LabelCardGeneric extends StatelessWidget {
   final String label;
   final String texto;
-  final Color color;
+  final Color colorLabel;
+  final Color colorTexto;
 
   const LabelCardGeneric({
     Key key,
     this.label,
     this.texto,
-    this.color
+    this.colorLabel,
+    this.colorTexto
   }) : super(key: key);
 
   @override
@@ -18,9 +20,9 @@ class LabelCardGeneric extends StatelessWidget {
       margin: EdgeInsets.only(top: 5.0),
       child: Row(
         children: [
-          Text(label, style: TextStyle(color:color)),
+          Text(label, style: TextStyle(color:colorLabel)),
           SizedBox(width: 5,),
-          Text(texto,  style: TextStyle( fontWeight: FontWeight.w500,color:color),),
+          Text(texto,  style: TextStyle( fontWeight: FontWeight.w500,color:colorTexto),),
         ],
       ),
     );
