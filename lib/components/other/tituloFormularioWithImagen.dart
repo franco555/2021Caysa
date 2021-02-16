@@ -1,4 +1,4 @@
-import 'package:caysa2021/components/other/imgenCirculo.dart';
+import 'package:caysa2021/components/imagen/imagenCirculo.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 

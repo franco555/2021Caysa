@@ -1,7 +1,7 @@
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 
-class CardProduct extends StatelessWidget {
+class ItemFormularioDetail extends StatelessWidget {
 
   final String imagen;
   final String titulo;
@@ -10,7 +10,7 @@ class CardProduct extends StatelessWidget {
   final double cantidad;
   final double precioTotal;
 
-  const CardProduct({
+  const ItemFormularioDetail({
     Key key,
     this.imagen,
     this.titulo,
@@ -18,13 +18,14 @@ class CardProduct extends StatelessWidget {
     this.precioUnitario,
     this.cantidad,
     this.precioTotal,
+   
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-      color: Colors.white,
+        color: Colors.transparent,
       ),
       margin:EdgeInsets.fromLTRB(0, 0, 0, 1) ,
       padding:EdgeInsets.only(right: 20, top: 10.0, bottom: 10.0),
@@ -35,7 +36,7 @@ class CardProduct extends StatelessWidget {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  _containerHome(AssetImage(imagen)),
+                  _containerHome(AssetImage(imagen),40),
                   Column(
                     crossAxisAlignment:CrossAxisAlignment.start,
                     children: <Widget>[
@@ -49,6 +50,7 @@ class CardProduct extends StatelessWidget {
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
                     '\$ $precioTotal',
@@ -96,11 +98,11 @@ class CardProduct extends StatelessWidget {
   } 
 
 
-  Widget _containerHome(AssetImage image) {
+  Widget _containerHome(AssetImage image,double size) {
     return Container(
-      height: 60.0,
-      width:60.0,
-      margin: EdgeInsets.only(left: 15.0, top: 5.0, right: 15.0, bottom: 5.0),
+      height: size,
+      width:size,
+      margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10.0)),
         color: Colors.blueGrey,

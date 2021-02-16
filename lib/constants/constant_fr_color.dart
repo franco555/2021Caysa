@@ -5,7 +5,7 @@ class CFr{
   CFr({this.isDark=false});
 
   //tamaño de nav
-  double getHeightNav() =>130.0; //->
+  double getHeightNav() =>140.0; //->
 
   //
   Color getColorFondo() => ColoresFr(isDark: isDark).colorFondo();//->

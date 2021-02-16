@@ -1,6 +1,7 @@
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/constants/constants.dart';
 import 'package:caysa2021/nav/account.dart';
+import 'package:caysa2021/components/buttoms/btnAction.dart';
 import 'package:caysa2021/nav/itemNav.dart';
 import 'package:caysa2021/dashboard/components/body.dart';
 import 'package:caysa2021/nav/customAppBar.dart';
@@ -36,7 +37,7 @@ class _ScDashBoardState extends State<ScDashBoard> {
               Divider(height: 1,color: fcolorTxt200,),
               ItemNav(titulo: "Venta",color: fcolorTxt200,icono: Icons.local_offer_outlined,ruta: "/dashboard",),
               Divider(height: 1,color: fcolorTxt200,),
-              ItemNav(titulo: "Envio",color: fcolorTxt200,icono: Icons.send_outlined,ruta: "/dashboard",),
+              ItemNav(titulo: "Envio",color: fcolorTxt200,icono: Icons.send_outlined,ruta: "/envio",),
               Divider(height: 1,color: fcolorTxt200,),
               ItemNav(titulo: "Recepción",color: fcolorTxt200,icono: Icons.how_to_vote_outlined,ruta: "/recepcion",),
               Divider(height: 1,color: fcolorTxt200,),
@@ -61,6 +62,11 @@ class _ScDashBoardState extends State<ScDashBoard> {
         subTituloSc: "Alejandro",
         fecha: "10-12-12",
         detail: false,
+        btnAppBar:[
+          BtnAction( icono:Icons.message, size: 26, color: CFr().getColorTextNavBar(),fn:(){}),
+          BtnAction( icono:Icons.notifications_none, size: 26, color:CFr().getColorTextNavBar(),fn:(){}),
+          SizedBox(width: getPadding20 / 2),
+        ]
       ) ,
       body: Body(),
     );

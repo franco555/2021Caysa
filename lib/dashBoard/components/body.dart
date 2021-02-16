@@ -1,4 +1,4 @@
-import 'package:caysa2021/components/other/separadorH.dart';
+import 'package:caysa2021/components/other/separadorHorizontal.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/constants/constants.dart';
 import 'package:flutter/material.dart';

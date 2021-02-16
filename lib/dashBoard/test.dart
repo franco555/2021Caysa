@@ -1,10 +1,8 @@
 
-import 'package:caysa2021/components/modal/modalFormSend.dart';
-import 'package:caysa2021/components/modal/modalProductoProceso.dart';
-import 'package:caysa2021/components/other/separadorH.dart';
+import 'package:caysa2021/components/other/separadorHorizontal.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/constants/constants.dart';
-import 'package:caysa2021/nav/btn_action.dart';
+import 'package:caysa2021/components/buttoms/btnAction.dart';
 import 'package:caysa2021/nav/customAppBar.dart';
 import 'package:flutter/material.dart';
 class ScTest extends StatefulWidget {
@@ -23,9 +21,9 @@ class _ScTestState extends State<ScTest> {
         subTituloSc: "Alejandro",
         fecha: "10-12-12",
         detail: true,
-        widget:[
-          BtnAction( icono:Icons.message, color: CFr().getColorTextNavBar(),fn:(){}),
-          BtnAction( icono:Icons.notifications_none, color:CFr().getColorTextNavBar(),fn:(){}),
+        btnAppBar:[
+          BtnAction( icono:Icons.message, size: 26,color: CFr().getColorTextNavBar(),fn:(){}),
+          BtnAction( icono:Icons.notifications_none,size: 26 ,color:CFr().getColorTextNavBar(),fn:(){}),
           SizedBox(width: getPadding20 / 2),
         ]
       ) ,
@@ -44,13 +42,14 @@ class _ScTestState extends State<ScTest> {
                    child: Text("Modal"),
                    color: Colors.blueAccent,
                    onPressed: ()=>{
-                    _showModal(context)
+                    //_showModal(context)
                   }),
                   MaterialButton(
                    child: Text("Producto Proceso"),
                    color: Colors.blueAccent,
                    onPressed: ()=>{
-                    _showModalProductoProceso(context)
+                     //_showModal(context)
+                    //_showModalProductoProceso(context)
                   }),
                 ],
               ),
@@ -60,7 +59,7 @@ class _ScTestState extends State<ScTest> {
     );
   }
 
-  _showModal(context){
+  /*_showModal(context){
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -72,15 +71,15 @@ class _ScTestState extends State<ScTest> {
         );
       },
     );
-  }
-  _showModalProductoProceso(context){
+  }*/
+  /*_showModalProductoProceso(context){
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
       builder: (BuildContext context) {
         return ModalProcutoProceso();
       },
-    );
+    );*/
   }
 
   //Modal de confirmacion
@@ -96,8 +95,8 @@ class _ScTestState extends State<ScTest> {
         );
       },
     );
-  }*/
-}
+  }
+}*/
 
 
 

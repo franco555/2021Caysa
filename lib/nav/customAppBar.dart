@@ -1,7 +1,5 @@
 import 'package:caysa2021/components/clipper/clipperNav.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
-import 'package:caysa2021/constants/constants.dart';
-import 'package:caysa2021/nav/btn_action.dart';
 import 'package:caysa2021/nav/detailAppBar.dart';
 import 'package:caysa2021/nav/detailGeneric.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +10,9 @@ class CustomAppBar extends StatelessWidget with  PreferredSizeWidget{
   final String subTituloSc;
   final String fecha;
   final bool detail;
-  final List<Widget> widget;
+  final bool detailBtn;
+  final List<Widget> btnAppBar;
+  final List<Widget> btnDetailAppBar;
 
   const CustomAppBar({
     Key key,
@@ -21,7 +21,9 @@ class CustomAppBar extends StatelessWidget with  PreferredSizeWidget{
     this.subTituloSc,
     this.fecha,
     this.detail=false,
-    this.widget
+    this.detailBtn=false,
+    this.btnDetailAppBar,
+    this.btnAppBar
   }) : super(key: key);
 
   Size get preferredSize => Size.fromHeight(CFr().getHeightNav());
@@ -51,19 +53,24 @@ class CustomAppBar extends StatelessWidget with  PreferredSizeWidget{
             ),
           ),
         ),
-        actions: widget,
-         /*actions: <Widget>[
-          BtnAction( icono:Icons.message, color: CFr().getColorTextNavBar(),fn:(){}),
-          BtnAction( icono:Icons.notifications_none, color:CFr().getColorTextNavBar(),fn:(){}),
-          SizedBox(width: getPadding20 / 2),
-        ],*/
-        bottom: PreferredSize(
-          preferredSize: Size.fromHeight(40),
-          child: Container(
-            width: size.width*0.95,
-            child: detail?DetailAppBar(tituloSc: tituloSc, subTituloSc: subTituloSc, fecha: fecha,):DetailGeneric(titulo: "DATOS GRAFICOS",)
+        actions: btnAppBar,
+        bottom: 
+          detailBtn ? PreferredSize(
+            preferredSize: Size.fromHeight(40),
+            child: Container(
+              width: size.width*0.95,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: btnDetailAppBar,
+              )
+            ),
+          ): PreferredSize(
+            preferredSize: Size.fromHeight(40),
+            child: Container(
+              width: size.width*0.95,
+              child: detail?DetailAppBar(tituloSc: tituloSc, subTituloSc: subTituloSc, fecha: fecha,):DetailGeneric(titulo: "DATOS GRAFICOS",)
+            ),
           ),
-        ),
         )
     );
   }

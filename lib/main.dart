@@ -1,7 +1,9 @@
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/dashBoard/Sc_DashBoard.dart';
 import 'package:caysa2021/dashBoard/test.dart';
-import 'package:caysa2021/received/sc_received.dart';
+import 'package:caysa2021/received/scReceived.dart';
+import 'package:caysa2021/received/scDetailReceived.dart';
+import 'package:caysa2021/send/scSend.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 void main() {
@@ -30,8 +32,9 @@ class _MyAppState extends State<MyApp> {
         "/dashboard":(BuildContext context)=>new ScTest(),
         "/compra":(BuildContext context)=>new ScTest(),
         "/venta":(BuildContext context)=>new ScTest(),
-        "/envio":(BuildContext context)=>new ScTest(),
+        "/envio":(BuildContext context)=>new ScSend(),
         "/recepcion":(BuildContext context)=>new ScReceived(),
+        "/detail_recepcion":(BuildContext context)=>new ScDetailReceived(),
         "/devolucion":(BuildContext context)=>new ScTest(),
         "/pedido":(BuildContext context)=>new ScTest(),
         "/reporte":(BuildContext context)=>new ScTest(),

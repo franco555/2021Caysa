@@ -1,58 +1,205 @@
+import 'package:caysa2021/components/buttoms/btnForm.dart';
 import 'package:caysa2021/components/cards/card_productosOfProceso.dart';
-import 'package:caysa2021/components/other/tituloFormularios.dart';
+import 'package:caysa2021/components/inputs/textFormFieldWithIcon.dart';
+import 'package:caysa2021/components/labels/labelDisable.dart';
+import 'package:caysa2021/components/labels/tituloOfModal.dart';
+import 'package:caysa2021/components/other/separadorHorizontal.dart';
 import 'package:caysa2021/components/styles/inputDecoration.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
+import 'package:caysa2021/components/other/validation.dart';
 import 'package:flutter/material.dart';
 
-class ModalProcutoProceso extends StatelessWidget {
+class ModalProcutoProceso extends StatefulWidget {
+
+  @override
+  _ModalProcutoProcesoState createState() => _ModalProcutoProcesoState();
+}
+
+class _ModalProcutoProcesoState extends State<ModalProcutoProceso> {
+
+  bool _toogle=true;
+  Size _size;
+  void _toggleFavorite() {
+    setState(() {
+      _toogle=!_toogle;
+    });
+  }
+
+  //
+    String name,email,phone;
+
+    TextEditingController password = TextEditingController();
+    TextEditingController confirmpassword = TextEditingController();
+
+    TextEditingController _cantidad = TextEditingController();
+    TextEditingController _precio = TextEditingController();
+    TextEditingController _precioTotal = TextEditingController();
+
+    final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+    
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    _size = MediaQuery.of(context).size;
     return Container(
-          height: size.height,
-          decoration: BoxDecoration(color: Colors.white,),
-          padding: EdgeInsets.symmetric(vertical:0, horizontal: 5),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              TituloFormulario(
-                titulo: "Procesos y Productos",
-                subTitulo: "Seleccione un proceso.",
-                ancho: size.width,
-              ),
-              Container(
-                decoration: lineaHorizontal(CFr().getColorLinea()),
-                  height: 115,
-                  child: getStories(),
-              ),
-              Expanded(
-                              child: SingleChildScrollView(
-                  
-                  child: Column(
-                    children: [
-                      CardProductosOfProceso(
-                        imagen:"assets/logo/logo_white.png",
-                        titulo:"goku",
-                        estado:"Pendiente",
-                        precioUnitario:12,
-                        stock:41,
-                      ),
-                      CardProductosOfProceso(
-                        imagen:"assets/logo/logo_white.png",
-                        titulo:"goku",
-                        estado:"Pendiente",
-                        precioUnitario:12,
-                        stock:41,
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
+      height: _size.height-60,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30),
+          topRight: Radius.circular(30),
+        ),
+      ),          
+          //padding: EdgeInsets.symmetric(vertical:0, horizontal: 5),
+      child: _toogle ? getProcesoProducto(): getFormulario(),
     );
   }
+
+  Widget getProcesoProducto(){
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          TituloOfModal(
+            titulo: "Procesos y Productos",
+            subTitulo: "Seleccione un Proceso.",
+            ancho: _size.width,
+            icono: Icons.arrow_back_outlined,
+            fn: _toggleFavorite,
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 10),
+            decoration: subSeccionDeModal(CFr().getColorFondo()),
+              height: 130,
+              child: getStories(),
+          ),
+          SeparadorHorizontal(
+            icono: Icons.list_alt,
+            color: CFr().getColorBtnLogin(),
+            titulo: "Lista de Productos",
+            fsize: 16.0,
+          ),
+          Expanded(
+            child: SingleChildScrollView(                  
+              child: Column(
+                children: [
+                  CardProductosOfProceso(
+                    imagen:"assets/logo/logo_white.png",
+                    titulo:"goku",
+                    estado:"Pendiente",
+                    precioUnitario:12,
+                    stock:41,
+                    fn: _toggleFavorite,
+                  ),
+                  CardProductosOfProceso(
+                    imagen:"assets/logo/logo_white.png",
+                    titulo:"goku",
+                    estado:"Pendiente",
+                    precioUnitario:12,
+                    stock:41,
+                    fn: _toggleFavorite,
+                  ),
+                  
+                ],
+              ),
+            ),
+          ),
+        ],
+      );
+  }
+
+  Widget getFormulario(){
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          TituloOfModal(
+            titulo: "Formulario",
+            subTitulo: "Complete los datos.",
+            ancho: _size.width,
+            icono: Icons.arrow_back_outlined,
+            fn: _toggleFavorite,
+          ),
+          
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Form(
+                    key: _formkey,
+                    child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 15,
+                      ),
+                      LabelDisable(
+                        producto:"Vegeta",
+                        proceso:"Costura"
+                      ),
+                      TextFormFieldWithIconGeneric(
+                        icono: Icons.monetization_on,
+                        nombre: "Precio Unidad",
+                        placeholder: "\$/ 00.0",
+                        isNum:true,
+                        controller: _precio,
+                        guardar:(value){_precio=value;},
+                        validacion:validatePrecio,
+                      ),
+                      TextFormFieldWithIconGeneric(
+                        icono: Icons.format_list_numbered_sharp,
+                        nombre: "Cantidad",
+                        placeholder: "0",
+                        isNum:true,
+                        controller: _cantidad,
+                        guardar:(value){_cantidad = value;},
+                        validacion: validateNumero,
+                      ),
+                      TextFormFieldWithIconGeneric(
+                        icono: Icons.monetization_on_outlined,
+                        nombre: "Total",
+                        placeholder:  "\$/ 00.0",
+                        isNum:true,
+                        controller: _precioTotal,
+                        guardar:(value){_precioTotal =value;},
+                        validacion: validatePrecioTotal,
+                      ),
+                      //DatePickerGeneric()
+                    ]),
+                  ),
+                  SizedBox(height: 20,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      BtnForm(
+                        texto:"Agregar" ,
+                        color: CFr().getColorTextPrecioTotalCard(),
+                        icono: Icons.save,
+                        fn: (){ save();},
+                      ),
+                      BtnForm(
+                        texto:"Cancelar" ,
+                        color: CFr().getColorTextBtnSalir(),
+                        icono: Icons.close,
+                        fn: _toggleFavorite,
+                      ),
+                    ],
+                  )
+                ],
+              )
+              
+            ),
+          ),
+        ],
+      );
+  }
+
+  save() {
+    if (_formkey.currentState.validate()) {
+      print("Cantidad $_cantidad");
+      //_formkey.currentState.reset();
+    }
+  }
+
 
    Widget getStories() {
     return ListView(
@@ -112,7 +259,7 @@ class ModalProcutoProceso extends StatelessWidget {
             )
           ),
           SizedBox(height: 3,),
-          Text(follower.username,)
+          Text(follower.username,style: TextStyle(color: CFr().getColorTextNavBar()),)
         ],
       ),
     );

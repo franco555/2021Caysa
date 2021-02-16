@@ -1,3 +1,4 @@
+import 'package:caysa2021/components/labels/labelCardGeneric.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +9,7 @@ class CardProductosOfProceso extends StatelessWidget {
   final String estado;
   final double precioUnitario;
   final double stock;
+  final Function fn;
 
   const CardProductosOfProceso({
     Key key,
@@ -16,6 +18,7 @@ class CardProductosOfProceso extends StatelessWidget {
     this.estado,
     this.precioUnitario,
     this.stock,
+    this.fn
   }) : super(key: key);
 
   @override
@@ -39,8 +42,8 @@ class CardProductosOfProceso extends StatelessWidget {
                     crossAxisAlignment:CrossAxisAlignment.start,
                     children: <Widget>[
                       Text( titulo,style: CFr().tsTextTituloCard(CFr().getColorTextTituloCard(),20.0),),
-                      _containerDescription('Estado:', estado),
-                      _containerDescription('P. Unitario:','\$ $precioUnitario'),
+                      LabelCardGeneric(label: 'Estado:', texto:estado , color:Colors.black ,),
+                      LabelCardGeneric(label: 'P. Unitario:', texto:'\$ $precioUnitario' , color:Colors.black ,)
                     ],
                   ),
                 ],
@@ -59,10 +62,13 @@ class CardProductosOfProceso extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Icon(
-                      Icons.add_circle_outline_outlined, 
-                      color: CFr().getColorIconoEditar(),
-                      size: 26,),
+                    child: 
+                      IconButton(
+                        icon: Icon(Icons.add_circle_outline_outlined,
+                          color: CFr().getColorIconoEditar(),size: 26,
+                        ), 
+                        onPressed:fn
+                      ),
                   ),
                 ],
               )
@@ -71,21 +77,7 @@ class CardProductosOfProceso extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  Widget _containerDescription(label, pu,){
-    return  Container(
-      margin: EdgeInsets.only(top: 5.0),
-      child: Row(
-        children: [
-          Text(label,),
-          SizedBox(width: 5,),
-          Text(pu, style: TextStyle(fontWeight: FontWeight.w500),),
-        ],
-      ),
-    );
   } 
-
 
   Widget _containerHome(AssetImage image) {
     return Container(
