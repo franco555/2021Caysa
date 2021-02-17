@@ -1,15 +1,16 @@
-import 'package:caysa2021/components/cards/cardPersonaList.dart';
-import 'package:caysa2021/components/inputs/searchAnimated.dart';
+import 'package:caysa2021/components/inputs/date.dart';
+import 'package:caysa2021/components/other/separadorHorizontal.dart';
+import 'package:caysa2021/components/progressBar/progreeBar.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/nav/appBarButtomDown.dart';
 import 'package:flutter/material.dart';
 
-class ScSendHistory extends StatefulWidget {
+class ScSendReport extends StatefulWidget {
   @override
-  _ScSendHistoryState createState() => _ScSendHistoryState();
+  _ScSendReportState createState() => _ScSendReportState();
 }
 
-class _ScSendHistoryState extends State<ScSendHistory> {
+class _ScSendReportState extends State<ScSendReport> {
 
   Color colorBtnAppBarDown=CFr().getColorBtnRegister();
   Color colorTextAppBar=CFr().getColorTextNavBar();
@@ -19,7 +20,7 @@ class _ScSendHistoryState extends State<ScSendHistory> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBarButtomDown(
-        tituloNav: "Historial",
+        tituloNav: "Reportes",
         subTituloNav: "De envíos",
         colortext:colorTextAppBar,
         altoAppBar: CFr().getAltoAppBar6(), //si es getAltoAppBar6=60 no se muestra buttom bar
@@ -32,26 +33,31 @@ class _ScSendHistoryState extends State<ScSendHistory> {
       ) ,
       body:Column(
         children: [
-          SearchAnimated(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              WgDate(titulo: "Desde",),
+              WgDate(titulo: "Hasta",),
+            ],
+          ),
+          SeparadorHorizontal(
+            icono: Icons.list,
+            titulo: "Cortes",
+            color:CFr().getColorAzul300(),
+            fsize: 18.0,
+          ),
           Expanded(
             child: SingleChildScrollView(
               child:Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
                   children: [
-                    CarPersonaList(
-                      imagen: 'assets/logo/logo_white.png',
-                      titulo: "Maria",
-                      colorFondo:Colors.transparent,
-                      colorText: CFr().getColorTextNavBar(),
-                      colorLinea: CFr().getColorLineaDown(),
-                      proceso:"Costura",
-                      estado: "Enviado",
-                      fecha:"12/12/12",
-                      colorSuccess: true,
-                      precioTotal: 150.0,
-                      fn: ()=>{Navigator.of(context).pushNamed("/detail_recepcion"),},
-                    ),
+                   WgProgressbar(
+                     titulo: "Cortes",
+                     icono: Icons.list,
+                     monto:125 ,
+                     porcentaje: 20,
+                   )
                   ],
                 ),
               )

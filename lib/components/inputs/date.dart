@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 
-class DatePickerGeneric extends StatefulWidget {
-
+class WgDate extends StatefulWidget {
   final String titulo;
-  const DatePickerGeneric({
+  const WgDate({
     Key key,
     this.titulo,
   }) : super(key: key);
-
   @override
-  _DatePickerGenericState createState() => _DatePickerGenericState();
+  _WgDateState createState() => _WgDateState();
 }
 
-class _DatePickerGenericState extends State<DatePickerGeneric> {
-  DateTime date=DateTime.now();
+class _WgDateState extends State<WgDate> {
+ 
+ DateTime date=DateTime.now();
   Future<Null> selectTimePicker(BuildContext context) async{
     final DateTime picker=await showDatePicker(
       context: context,
@@ -28,21 +27,18 @@ class _DatePickerGenericState extends State<DatePickerGeneric> {
     }
 
   }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom:15,left: 10,right: 10),
+      padding: EdgeInsets.symmetric(horizontal: 5.0 ,vertical: 5),
       child: Container(
-        padding: const EdgeInsets.only(left: 10,right: 0),
+        padding: EdgeInsets.only(left: 15),
         decoration: BoxDecoration(
-          border: Border(
-                bottom: BorderSide(
-                  color: Colors.blue,
-                  width: 1
-                )
-              )
+          color: Colors.white,
+          borderRadius:BorderRadius.all(Radius.circular(30.0),),
         ),
-        child: _inputDate()
+        child: _inputDate(),
       ),
     );
   }
@@ -52,7 +48,13 @@ class _DatePickerGenericState extends State<DatePickerGeneric> {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text("${date.day} / ${date.month} / ${date.year}", style: TextStyle(fontSize: 16),),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(widget.titulo, style: TextStyle(fontSize: 10,),),
+            Text("${date.day} / ${date.month} / ${date.year}", style: TextStyle(fontSize: 16,),),
+          ],
+        ),            
         IconButton(
             icon: Icon(Icons.calendar_today), 
             color: Colors.black45,
@@ -60,7 +62,6 @@ class _DatePickerGenericState extends State<DatePickerGeneric> {
             selectTimePicker(context);
           },
         ),
-      
       ],
     );
   }
