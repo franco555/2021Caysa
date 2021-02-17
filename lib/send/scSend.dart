@@ -23,6 +23,7 @@ class _ScSendState extends State<ScSend> {
         tituloNav: "Envio",
         subTituloNav: "Sección de envíos",
         colortext:colorTextAppBar,
+        altoAppBar: CFr().getAltoAppBar12(),
         btnAppBarAction: [
           IconButton(
             icon: Icon(Icons.more_vert_rounded,color:colorTextAppBar,size: sizeTxtBtnAppBarDown-10,), 
@@ -34,7 +35,9 @@ class _ScSendState extends State<ScSend> {
           children: [
             IconoWithNombreInVertical(nombre:"Nuevo" ,icono:Icons.add ,color:colorBtnAppBarDown,size:sizeTxtBtnAppBarDown,fn: (){},),
             IconoWithNombreInVertical( nombre:"Reporte" ,icono:Icons.equalizer_outlined ,color:colorBtnAppBarDown ,size:sizeTxtBtnAppBarDown,fn: (){}, ),
-            IconoWithNombreInVertical(nombre:"Historial" ,icono:Icons.history_outlined ,color:colorBtnAppBarDown , size:sizeTxtBtnAppBarDown,fn: (){},)
+            IconoWithNombreInVertical(nombre:"Historial" ,icono:Icons.history_outlined ,color:colorBtnAppBarDown , size:sizeTxtBtnAppBarDown,
+              fn: (){ Navigator.of(context).pushNamed("/envio_History");},
+            )
           ],
         ),
       ) ,

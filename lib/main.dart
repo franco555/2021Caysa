@@ -4,6 +4,7 @@ import 'package:caysa2021/dashBoard/test.dart';
 import 'package:caysa2021/received/scReceived.dart';
 import 'package:caysa2021/received/scDetailReceived.dart';
 import 'package:caysa2021/send/scSend.dart';
+import 'package:caysa2021/send/scSendHistory.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 void main() {
@@ -33,6 +34,8 @@ class _MyAppState extends State<MyApp> {
         "/compra":(BuildContext context)=>new ScTest(),
         "/venta":(BuildContext context)=>new ScTest(),
         "/envio":(BuildContext context)=>new ScSend(),
+        "/envio_History":(BuildContext context)=>new ScSendHistory(),
+        "/envio_Detail":(BuildContext context)=>new ScSend(),
         "/recepcion":(BuildContext context)=>new ScReceived(),
         "/detail_recepcion":(BuildContext context)=>new ScDetailReceived(),
         "/devolucion":(BuildContext context)=>new ScTest(),

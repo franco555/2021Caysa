@@ -7,6 +7,7 @@ class CFr{
   //tamaño de nav
   double getAltoAppBar14() =>140.0; //->
   double getAltoAppBar12() =>120.0; //->
+  double getAltoAppBar6() =>60.0; //valida el bottomBar
 
   //
   Color getColorFondo() => ColoresFr(isDark: isDark).colorFondo();//->
