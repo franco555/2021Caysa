@@ -172,7 +172,7 @@ class _ModalProcutoProcesoState extends State<ModalProcutoProceso> {
                     children: [
                       BtnForm(
                         texto:"Agregar" ,
-                        color: CFr().getColorTextPrecioTotalCard(),
+                        color: CFr().getColorAzul400(),
                         icono: Icons.save,
                         fn: (){ save();},
                       ),

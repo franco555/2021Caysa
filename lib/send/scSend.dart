@@ -1,6 +1,6 @@
 import 'package:caysa2021/components/buttoms/iconoWithNombreInVertical.dart';
 import 'package:caysa2021/components/cards/cardPersonaList.dart';
-import 'package:caysa2021/components/modal/modalFormSend.dart';
+import 'package:caysa2021/components/modal/modalPersonas.dart';
 import 'package:caysa2021/components/other/separadorHorizontal.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/nav/appBarButtomDown.dart';
@@ -84,7 +84,7 @@ class _ScSendState extends State<ScSend> {
       context: context,
       isScrollControlled: true,
       builder: (BuildContext context) {
-        return ModalFormSend();
+        return ModalPersona();
       },
     );
   }

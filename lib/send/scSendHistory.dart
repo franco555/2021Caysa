@@ -32,7 +32,7 @@ class _ScSendHistoryState extends State<ScSendHistory> {
       ) ,
       body:Column(
         children: [
-          SearchAnimated(),
+          SearchAnimated(colorLinea: Colors.white,colorIcono: Colors.black,),
           Expanded(
             child: SingleChildScrollView(
               child:Padding(

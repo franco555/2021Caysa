@@ -55,7 +55,7 @@ class ItemFormularioDetail extends StatelessWidget {
                   Text(
                     '\$ $precioTotal',
                     style: TextStyle(
-                        color: CFr().getColorTextPrecioTotalCard(),
+                        color: CFr().getColorAzul600(),
                         fontSize: 20.0,
                         fontWeight: FontWeight.w400),
                   ),
@@ -66,7 +66,7 @@ class ItemFormularioDetail extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Icon(Icons.edit, color: CFr().getColorIconoEditar(),),
+                        child: Icon(Icons.edit, color: CFr().getColorAzul400(),),
                       ),
                       Container(width: 1,height: 25,color: Colors.black26,),
                       Padding(

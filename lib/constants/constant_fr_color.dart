@@ -40,14 +40,15 @@ class CFr{
   Color getColorAzul300() => ColoresFr(isDark: isDark).colorAzul_300();
   Color getColorAzul400() => Color(0xFF59C6D1);
   //Color getColorAzul500() => Color(0xFF04ADBF);
-  //Color getColorAzul600() => Color(0xFF025373);
+  Color getColorAzul600() => Color(0xFF025373);
 
   //Colores Genericos
   Color getColorSuccess() => ColoresFr(isDark: isDark).colorTextPrecioTotalCard();
   Color getColorWarning() => ColoresFr(isDark: isDark).colorAmarillo_300();
   Color getColorDanger() => ColoresFr(isDark: isDark).colorTextBtnSalir();
   Color getColorInfo() => ColoresFr(isDark: isDark).colorAzul_300();
-  Color getColorSecondary() => ColoresFr(isDark: isDark).colorGris_100();
+  Color getColorSecondary() => ColoresFr(isDark: isDark).colorGris_200();
+  Color getColorBlancoTenue() => ColoresFr(isDark: isDark).colorGris_100();
 
 
   //TextStile
@@ -89,7 +90,8 @@ class ColoresFr{
   Color colorAzul_300()=>isDark ? color0Drark : _azul_300; //->
 
   Color colorAmarillo_300()=>isDark ? color0Drark : Color(0xffFFF948); //->
-  Color colorGris_100()=>isDark ? color0Drark : Color(0xffD9D9D9);// ->
+  Color colorGris_100()=>isDark ? color0Drark : Color(0xffF4F4F4);// ->#
+  Color colorGris_200()=>isDark ? color0Drark : Color(0xffD9D9D9);// ->
   
 
   //variables
