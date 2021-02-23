@@ -3,11 +3,13 @@ import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 
 class LabelDisable extends StatelessWidget {
+  final String imagen;
   final String producto;
   final String proceso;
 
   const LabelDisable({
     Key key,
+    this.imagen,
     this.producto,
     this.proceso,
   }) : super(key: key);
@@ -31,7 +33,7 @@ class LabelDisable extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           ImagenCirculo(
-            imagen:"assets/logo/logo_white.png" ,
+            imagen:imagen,
             color: CFr().getColorBtnLogin(),
             size: 50,
           ),

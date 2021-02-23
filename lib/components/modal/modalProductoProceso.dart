@@ -138,6 +138,7 @@ class _ModalProcutoProcesoState extends State<ModalProcutoProceso> {
                         height: 15,
                       ),
                       LabelDisable(
+                        imagen: "assets/logo/logo_white.png",
                         producto:"Vegeta",
                         proceso:"Costura"
                       ),
