@@ -19,10 +19,13 @@ class _ModalProcutoProcesoState extends State<ModalProcutoProceso> {
 
   bool _toogle=true;
   Size _size;
+
   void _toggleFavorite() {
-    setState(() {
-      _toogle=!_toogle;
-    });
+    setState(() {_toogle=!_toogle;});
+  }
+
+  void _closeModal() {
+    Navigator.of(context).pop();
   }
 
   //
@@ -63,8 +66,9 @@ class _ModalProcutoProcesoState extends State<ModalProcutoProceso> {
             titulo: "Procesos y Productos",
             subTitulo: "Seleccione un Proceso.",
             ancho: _size.width,
-            icono: Icons.arrow_back_outlined,
-            fn: _toggleFavorite,
+            icono: Icons.close,
+            fn: _closeModal,
+            isPagePrincipal: true,//(){toggleFavorite(true);},
           ),
           Container(
             padding: EdgeInsets.symmetric(vertical: 10),
@@ -88,7 +92,7 @@ class _ModalProcutoProcesoState extends State<ModalProcutoProceso> {
                     estado:"Pendiente",
                     precioUnitario:12,
                     stock:41,
-                    fn: _toggleFavorite,
+                    fn:_toggleFavorite,
                   ),
                   CardProductosOfProceso(
                     imagen:"assets/logo/logo_white.png",
@@ -96,7 +100,7 @@ class _ModalProcutoProcesoState extends State<ModalProcutoProceso> {
                     estado:"Pendiente",
                     precioUnitario:12,
                     stock:41,
-                    fn: _toggleFavorite,
+                    fn:_toggleFavorite,
                   ),
                   
                 ],
@@ -118,6 +122,7 @@ class _ModalProcutoProcesoState extends State<ModalProcutoProceso> {
             ancho: _size.width,
             icono: Icons.arrow_back_outlined,
             fn: _toggleFavorite,
+            isPagePrincipal: false
           ),
           
           Expanded(

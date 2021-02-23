@@ -9,6 +9,7 @@ class TituloOfModal extends StatelessWidget {
   final String subTitulo;
   final double ancho;
   final IconData icono;
+  final bool isPagePrincipal;
   final Function fn;
   const TituloOfModal({
     Key key,
@@ -16,7 +17,8 @@ class TituloOfModal extends StatelessWidget {
     this.subTitulo,
     this.ancho,
     this.icono,
-    this.fn
+    this.fn,
+    this.isPagePrincipal,
   }) : super(key: key);
 
   @override
@@ -25,22 +27,32 @@ class TituloOfModal extends StatelessWidget {
       padding: const EdgeInsets.all(0),
       child:Container(
         width: ancho,
-        padding: EdgeInsets.symmetric(vertical: 20,horizontal: 0),
+        padding: EdgeInsets.symmetric(vertical: 20,horizontal: isPagePrincipal ? 20 : 0),
         decoration: tituloDeModal(CFr().getColorBarraDeTitulo()),
         child: Row(
+          mainAxisAlignment: isPagePrincipal ? MainAxisAlignment.spaceBetween: MainAxisAlignment.start,
+          //crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            IconButton(icon: Icon(icono, color: CFr().getColorTextNavBar(),size: 26,), onPressed:fn, ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(titulo,style: TextStyle(fontSize: 24,color: CFr().getColorTextNavBar()),),
-                Text(subTitulo,style: TextStyle(fontSize: 14,color: CFr().getColorTextNavBar()),),
-              ],
-            ),
+            isPagePrincipal?_titulo():_icono(),
+            isPagePrincipal?_icono():_titulo(),
           ],
         ),
       ),
     );
+  }
+
+  Column _titulo(){
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Text(titulo,style: TextStyle(fontSize: 24,color: CFr().getColorTextNavBar()),),
+        Text(subTitulo,style: TextStyle(fontSize: 14,color: CFr().getColorTextNavBar()),),
+      ],
+    );
+  }
+
+  IconButton _icono(){
+    return IconButton(icon: Icon(icono, color: CFr().getColorTextNavBar(),size: 26,), onPressed:fn, );
   }
 }
