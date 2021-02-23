@@ -4,7 +4,7 @@ import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/components/imagen/imagenCardGeneric.dart';
 import 'package:caysa2021/components/labels/labelCardGeneric.dart';
 
-class CarPersonaList extends StatelessWidget {
+class ItemCardPersona extends StatelessWidget {
   final String imagen;
   final String titulo;
   final String fecha;
@@ -17,7 +17,7 @@ class CarPersonaList extends StatelessWidget {
   final double precioTotal;
   final Function fn;
 
-  const CarPersonaList({
+  const ItemCardPersona({
     Key key,
     this.imagen,
     this.titulo,

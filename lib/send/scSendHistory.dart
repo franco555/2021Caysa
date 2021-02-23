@@ -1,4 +1,4 @@
-import 'package:caysa2021/components/cards/cardPersonaList.dart';
+import 'package:caysa2021/components/cards/itemCardPersona.dart';
 import 'package:caysa2021/components/inputs/searchAnimated.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/nav/appBarButtomDown.dart';
@@ -39,7 +39,7 @@ class _ScSendHistoryState extends State<ScSendHistory> {
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
                   children: [
-                    CarPersonaList(
+                    ItemCardPersona(
                       imagen: 'assets/logo/logo_white.png',
                       titulo: "Maria",
                       colorFondo:Colors.transparent,

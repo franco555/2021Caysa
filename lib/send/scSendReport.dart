@@ -1,5 +1,5 @@
 import 'package:caysa2021/components/inputs/date.dart';
-import 'package:caysa2021/components/other/separadorHorizontal.dart';
+import 'package:caysa2021/components/other/tituloSeccionWithIcono.dart';
 import 'package:caysa2021/components/progressBar/progreeBar.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/nav/appBarButtomDown.dart';
@@ -40,7 +40,7 @@ class _ScSendReportState extends State<ScSendReport> {
               WgDate(titulo: "Hasta",),
             ],
           ),
-          SeparadorHorizontal(
+          TituloSeccionWithIcono(
             icono: Icons.list,
             titulo: "Cortes",
             color:CFr().getColorAzul300(),

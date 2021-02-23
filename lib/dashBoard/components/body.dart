@@ -1,4 +1,4 @@
-import 'package:caysa2021/components/other/separadorHorizontal.dart';
+import 'package:caysa2021/components/other/tituloSeccionWithIcono.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/constants/constants.dart';
 import 'package:flutter/material.dart';
@@ -124,7 +124,7 @@ class Body extends StatelessWidget {
             color: CFr().getColorBtnRegister(),
             margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
           ),
-          SeparadorHorizontal(
+          TituloSeccionWithIcono(
             icono: Icons.history,
             titulo: "Historial",
             color: CFr().getColorBtnLogin(),

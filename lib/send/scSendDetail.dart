@@ -9,7 +9,7 @@ class ScSendDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBarClassic(
-        tituloNav: "Form. Envio",
+        tituloNav: "Detalle de Envío",
         subTituloNav: "Alantite montereal",
         total:"\$ 0",
         btnAppBar: [

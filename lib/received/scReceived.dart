@@ -1,5 +1,5 @@
-import 'package:caysa2021/components/cards/cardPersonaList.dart';
-import 'package:caysa2021/components/other/separadorHorizontal.dart';
+import 'package:caysa2021/components/cards/itemCardPersona.dart';
+import 'package:caysa2021/components/other/tituloSeccionWithIcono.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/nav/customAppBar.dart';
 import 'package:flutter/material.dart';
@@ -29,13 +29,13 @@ class ScReceived extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  SeparadorHorizontal(
+                  TituloSeccionWithIcono(
                     icono: Icons.list,
                     titulo: "Ultimas Recepciones",
                     color: CFr().getColorBtnLogin(),
                     fsize: 18.0,
                   ),
-                  CarPersonaList(
+                  ItemCardPersona(
                     imagen: 'assets/logo/logo_white.png',
                     titulo: "Maria",
                     proceso:"Costura",

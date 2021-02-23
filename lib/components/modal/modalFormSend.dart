@@ -4,7 +4,7 @@ import 'package:caysa2021/components/cards/card_productosOfProceso.dart';
 import 'package:caysa2021/components/inputs/searchAnimated.dart';
 import 'package:caysa2021/components/inputs/textFormFieldWithIcon.dart';
 import 'package:caysa2021/components/labels/labelDisable.dart';
-import 'package:caysa2021/components/other/separadorHorizontal.dart';
+import 'package:caysa2021/components/other/tituloSeccionWithIcono.dart';
 import 'package:caysa2021/components/other/tituloFormularioWithImagen.dart';
 import 'package:caysa2021/components/other/validation.dart';
 import 'package:caysa2021/components/styles/inputDecoration.dart';
@@ -198,7 +198,7 @@ class _ModalFormSendState extends State<ModalFormSend> {
               height: 130,
               child: getStories(),
         ),
-        SeparadorHorizontal(
+        TituloSeccionWithIcono(
           icono: Icons.list_alt,
           color: CFr().getColorBtnLogin(),
           titulo: "Lista de Productos",

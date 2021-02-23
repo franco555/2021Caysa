@@ -1,7 +1,7 @@
 import 'package:caysa2021/components/buttoms/iconoWithNombreInVertical.dart';
-import 'package:caysa2021/components/cards/cardPersonaList.dart';
+import 'package:caysa2021/components/cards/itemCardPersona.dart';
 import 'package:caysa2021/components/modal/modalPersonas.dart';
-import 'package:caysa2021/components/other/separadorHorizontal.dart';
+import 'package:caysa2021/components/other/tituloSeccionWithIcono.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/nav/appBarButtomDown.dart';
 import 'package:flutter/material.dart';
@@ -51,13 +51,13 @@ class _ScSendState extends State<ScSend> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              SeparadorHorizontal(
+              TituloSeccionWithIcono(
                 icono: Icons.list,
                 titulo: "Ultimos Envios",
-                color:CFr().getColorAzul300(),// CFr().getColorBtnLogin(),
+                color:CFr().getColorAzul300(),
                 fsize: 18.0,
               ),
-              CarPersonaList(
+              ItemCardPersona(
                 imagen: 'assets/logo/logo_white.png',
                 titulo: "Maria",
                 colorFondo:Colors.transparent,
@@ -84,7 +84,7 @@ class _ScSendState extends State<ScSend> {
       context: context,
       isScrollControlled: true,
       builder: (BuildContext context) {
-        return ModalPersona();
+        return ModalSearchPersona();
       },
     );
   }

@@ -7,6 +7,7 @@ class CarPerson extends StatelessWidget {
   final String imagen;
   final String nombre;
   final String apellido;
+  final String especialidad;
   final Color colorFondo;
   final Color colorText;
   final Color colorLinea;
@@ -17,6 +18,7 @@ class CarPerson extends StatelessWidget {
     this.imagen,
     this.nombre,
     this.apellido,
+    this.especialidad,
     this.colorFondo,
     this.colorText,
     this.colorLinea,
@@ -40,8 +42,8 @@ class CarPerson extends StatelessWidget {
                   Column(
                     crossAxisAlignment:CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text( nombre,style: CFr().tsTextTituloCard(colorText,20.0),),
-                      Text(apellido,  style: TextStyle( fontWeight: FontWeight.w500,color:colorText),),                     
+                      Text( "$nombre $apellido",style: CFr().tsTextTituloCard(colorText,20.0),),
+                      Text(especialidad,  style: TextStyle( fontWeight: FontWeight.w500,color:colorText),),
                     ],
                   ),
                 ],

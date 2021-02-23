@@ -4,12 +4,12 @@ import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-class ModalPersona extends StatefulWidget {
+class ModalSearchPersona extends StatefulWidget {
 
   final Function fn;
   final String titulo;
   final String subTitulo;
-  const ModalPersona({
+  const ModalSearchPersona({
     Key key,
     this.titulo,
     this.subTitulo,
@@ -17,10 +17,10 @@ class ModalPersona extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _ModalPersonaState createState() => _ModalPersonaState();
+  _ModalSearchPersonaState createState() => _ModalSearchPersonaState();
 }
 
-class _ModalPersonaState extends State<ModalPersona> {
+class _ModalSearchPersonaState extends State<ModalSearchPersona> {
 
   @override
   Widget build(BuildContext context) {
@@ -84,6 +84,7 @@ class _ModalPersonaState extends State<ModalPersona> {
                     imagen: "assets/logo/logo_white.png",
                     nombre: "Franco",
                     apellido: "Caysahuana",
+                    especialidad: "Costurero",
                     colorFondo:Colors.transparent ,
                     colorText: CFr().getColorAzul600(),
                     colorLinea: CFr().getColorSecondary(),
@@ -96,6 +97,7 @@ class _ModalPersonaState extends State<ModalPersona> {
                     imagen: "assets/logo/logo_white.png",
                     nombre: "Franco",
                     apellido: "Caysahuana",
+                    especialidad: "Costurero",
                     colorFondo:Colors.transparent ,
                     colorText: CFr().getColorAzul600(),
                     colorLinea: CFr().getColorSecondary(),
@@ -105,6 +107,7 @@ class _ModalPersonaState extends State<ModalPersona> {
                     imagen: "assets/logo/logo_white.png",
                     nombre: "Franco",
                     apellido: "Caysahuana",
+                    especialidad: "Costurero",
                     colorFondo:Colors.transparent ,
                     colorText: CFr().getColorAzul600(),
                     colorLinea: CFr().getColorSecondary(),
@@ -114,6 +117,7 @@ class _ModalPersonaState extends State<ModalPersona> {
                     imagen: "assets/logo/logo_white.png",
                     nombre: "Franco",
                     apellido: "Caysahuana",
+                    especialidad: "Costurero",
                     colorFondo:Colors.transparent ,
                     colorText: CFr().getColorAzul600(),
                     colorLinea: CFr().getColorSecondary(),
@@ -123,6 +127,7 @@ class _ModalPersonaState extends State<ModalPersona> {
                     imagen: "assets/logo/logo_white.png",
                     nombre: "Franco",
                     apellido: "Caysahuana",
+                    especialidad: "Cortador",
                     colorFondo:Colors.transparent ,
                     colorText: CFr().getColorAzul600(),
                     colorLinea: CFr().getColorSecondary(),
@@ -132,6 +137,7 @@ class _ModalPersonaState extends State<ModalPersona> {
                     imagen: "assets/logo/logo_white.png",
                     nombre: "Franco",
                     apellido: "Caysahuana",
+                    especialidad: "Costurero",
                     colorFondo:Colors.transparent ,
                     colorText: CFr().getColorAzul600(),
                     colorLinea: CFr().getColorSecondary(),
@@ -141,6 +147,7 @@ class _ModalPersonaState extends State<ModalPersona> {
                     imagen: "assets/logo/logo_white.png",
                     nombre: "Franco",
                     apellido: "Caysahuana",
+                    especialidad: "Costurero",
                     colorFondo:Colors.transparent ,
                     colorText: CFr().getColorAzul600(),
                     colorLinea: CFr().getColorSecondary(),
@@ -150,6 +157,7 @@ class _ModalPersonaState extends State<ModalPersona> {
                     imagen: "assets/logo/logo_white.png",
                     nombre: "Franco",
                     apellido: "Caysahuana",
+                    especialidad: "Costurero",
                     colorFondo:Colors.transparent ,
                     colorText: CFr().getColorAzul600(),
                     colorLinea: CFr().getColorSecondary(),
@@ -159,6 +167,7 @@ class _ModalPersonaState extends State<ModalPersona> {
                     imagen: "assets/logo/logo_white.png",
                     nombre: "Franco",
                     apellido: "Caysahuana",
+                    especialidad: "Llenador",
                     colorFondo:Colors.transparent ,
                     colorText: CFr().getColorAzul600(),
                     colorLinea: CFr().getColorSecondary(),

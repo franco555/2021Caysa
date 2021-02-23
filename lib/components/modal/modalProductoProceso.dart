@@ -3,7 +3,7 @@ import 'package:caysa2021/components/cards/card_productosOfProceso.dart';
 import 'package:caysa2021/components/inputs/textFormFieldWithIcon.dart';
 import 'package:caysa2021/components/labels/labelDisable.dart';
 import 'package:caysa2021/components/labels/tituloOfModal.dart';
-import 'package:caysa2021/components/other/separadorHorizontal.dart';
+import 'package:caysa2021/components/other/tituloSeccionWithIcono.dart';
 import 'package:caysa2021/components/styles/inputDecoration.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/components/other/validation.dart';
@@ -72,7 +72,7 @@ class _ModalProcutoProcesoState extends State<ModalProcutoProceso> {
               height: 130,
               child: getStories(),
           ),
-          SeparadorHorizontal(
+          TituloSeccionWithIcono(
             icono: Icons.list_alt,
             color: CFr().getColorBtnLogin(),
             titulo: "Lista de Productos",

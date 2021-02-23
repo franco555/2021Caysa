@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class SeparadorHorizontal extends StatelessWidget {
+class TituloSeccionWithIcono extends StatelessWidget {
   final IconData icono;
   final String titulo;
   final Color color;
   final double fsize;
 
-   const SeparadorHorizontal({
+   const TituloSeccionWithIcono({
     Key key,
     this.icono,
     this.titulo,
@@ -22,7 +22,6 @@ class SeparadorHorizontal extends StatelessWidget {
             padding: EdgeInsets.all(10),
             width: size.width,
             decoration: BoxDecoration(
-              //color: Colors.white,
               boxShadow: [
                 BoxShadow(
                   color: Colors.transparent,
@@ -31,7 +30,6 @@ class SeparadorHorizontal extends StatelessWidget {
                   offset: Offset(0, 10),
                 ),
               ],
-              //borderRadius: BorderRadius.circular(30)
               border: Border(
                 bottom: BorderSide(
                   color: color,

@@ -52,7 +52,8 @@ class CFr{
 
 
   //TextStile
-  TextStyle tsTextTituloCard(color,fsize)=>TextStyle(color:color,fontSize: fsize, fontWeight: FontWeight.bold);
+  TextStyle tsTextTituloCard(color,fsize)=>TextStyle(color:color,fontSize: fsize, fontWeight: FontWeight.w300);
+  TextStyle tsTextTituloCardBold(color,fsize)=>TextStyle(color:color,fontSize: fsize, fontWeight: FontWeight.bold);
   
 }
 

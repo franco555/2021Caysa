@@ -40,7 +40,7 @@ class ItemFormularioDetail extends StatelessWidget {
                   Column(
                     crossAxisAlignment:CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text( titulo,style: CFr().tsTextTituloCard(CFr().getColorTextTituloCard(),20.0),),
+                      Text( titulo,style: CFr().tsTextTituloCardBold(CFr().getColorTextTituloCard(),20.0),),
                       _containerDescription('Estado:', estado),
                       _containerDescription('P. Unitario:','\$ $precioUnitario'),
                       _containerDescription('Cantidad: ','$cantidad')
@@ -52,9 +52,7 @@ class ItemFormularioDetail extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text(
-                    '\$ $precioTotal',
-                    style: TextStyle(
+                  Text('\$ $precioTotal', style: TextStyle(
                         color: CFr().getColorAzul600(),
                         fontSize: 20.0,
                         fontWeight: FontWeight.w400),

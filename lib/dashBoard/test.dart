@@ -1,5 +1,5 @@
 
-import 'package:caysa2021/components/other/separadorHorizontal.dart';
+import 'package:caysa2021/components/other/tituloSeccionWithIcono.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/constants/constants.dart';
 import 'package:caysa2021/components/buttoms/btnAction.dart';
@@ -32,7 +32,7 @@ class _ScTestState extends State<ScTest> {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  SeparadorHorizontal(
+                  TituloSeccionWithIcono(
                     icono: Icons.list,
                     titulo: "Lista",
                     color: CFr().getColorBtnLogin(),
