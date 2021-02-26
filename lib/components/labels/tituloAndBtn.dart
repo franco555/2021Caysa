@@ -52,7 +52,7 @@ class TituloAndBtn extends StatelessWidget {
             ],
           ),
           InkWell(
-            child:  Icon(Icons.add_circle_outline,color: color,size: fsize+10,),
+            child:  Icon(iconoOfBtn, color: color,size: fsize+10,),
             onTap: fn,
           )
         ],

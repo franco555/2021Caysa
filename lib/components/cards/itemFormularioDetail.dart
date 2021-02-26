@@ -9,6 +9,7 @@ class ItemFormularioDetail extends StatelessWidget {
   final double precioUnitario;
   final double cantidad;
   final double precioTotal;
+  final bool isDelete;
 
   const ItemFormularioDetail({
     Key key,
@@ -18,6 +19,7 @@ class ItemFormularioDetail extends StatelessWidget {
     this.precioUnitario,
     this.cantidad,
     this.precioTotal,
+    this.isDelete = true,
    
   }) : super(key: key);
 
@@ -66,11 +68,11 @@ class ItemFormularioDetail extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Icon(Icons.edit, color: CFr().getColorAzul400(),),
                       ),
-                      Container(width: 1,height: 25,color: Colors.black26,),
-                      Padding(
+                      isDelete ? Container(width: 1,height: 25,color: Colors.black26,):SizedBox(),
+                      isDelete ? Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Icon(Icons.remove_circle_outline, color: CFr().getColorTextBtnSalir(),),
-                      ),
+                      ):SizedBox(),
                     ],
                   )
                 ],

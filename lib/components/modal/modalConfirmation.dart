@@ -38,7 +38,7 @@ class ModalConfirmation extends StatelessWidget {
                 children: [
                   IconButton(
                     icon: Icon(Icons.check), 
-                    color: CFr().getColorTextPrecioTotalCard(),
+                    color: CFr().getColorAzul400(),
                     onPressed: fn
                   ),
                   IconButton(

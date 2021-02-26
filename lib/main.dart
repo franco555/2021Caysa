@@ -2,11 +2,13 @@ import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/dashBoard/Sc_DashBoard.dart';
 import 'package:caysa2021/dashBoard/test.dart';
 import 'package:caysa2021/received/scReceived.dart';
-import 'package:caysa2021/received/scDetailReceived.dart';
 import 'package:caysa2021/send/scSend.dart';
 import 'package:caysa2021/send/scSendDetail.dart';
 import 'package:caysa2021/send/scSendHistory.dart';
 import 'package:caysa2021/send/scSendReport.dart';
+import 'package:caysa2021/received/scReceivedDetail.dart';
+import 'package:caysa2021/received/scReceivedHistory.dart';
+import 'package:caysa2021/received/scReceivedReport.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 void main() {
@@ -40,7 +42,9 @@ class _MyAppState extends State<MyApp> {
         "/envio_Detail":(BuildContext context)=>new ScSendDetail(),
         "/envio_Report":(BuildContext context)=>new ScSendReport(),
         "/recepcion":(BuildContext context)=>new ScReceived(),
-        "/detail_recepcion":(BuildContext context)=>new ScDetailReceived(),
+        "/recepcion_Detail":(BuildContext context)=>new ScReceivedDetail(),
+        "/recepcion_Report":(BuildContext context)=>new ScReceivedReport(),
+        "/recepcion_History":(BuildContext context)=>new ScReceivedHistory(),
         "/devolucion":(BuildContext context)=>new ScTest(),
         "/pedido":(BuildContext context)=>new ScTest(),
         "/reporte":(BuildContext context)=>new ScTest(),
