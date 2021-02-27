@@ -1,6 +1,7 @@
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/dashBoard/Sc_DashBoard.dart';
 import 'package:caysa2021/dashBoard/test.dart';
+import 'package:caysa2021/received/scComprobante.dart';
 import 'package:caysa2021/received/scReceived.dart';
 import 'package:caysa2021/send/scSend.dart';
 import 'package:caysa2021/send/scSendDetail.dart';
@@ -49,6 +50,7 @@ class _MyAppState extends State<MyApp> {
         "/pedido":(BuildContext context)=>new ScTest(),
         "/reporte":(BuildContext context)=>new ScTest(),
         "/configuracion":(BuildContext context)=>new ScTest(),
+        "/comprobante":(BuildContext context)=>new ScComprobante(),
         "/salir":(BuildContext context)=>new ScTest(),
       },
     );

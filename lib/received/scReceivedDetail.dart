@@ -39,21 +39,12 @@ class ScReceivedDetail extends StatelessWidget {
                 titulo: "Productos",
                 color: CFr().getColorBtnLogin(),
                 fsize: 18.0,
-                fn:(){_showModalProductoProceso(context);}
+                fn:(){_showModalSaveConfirm(context);}
               ),              
               Expanded(
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      ItemFormularioDetail(
-                        imagen: 'assets/logo/logo_white.png',
-                        titulo: "Unicornio",
-                        precioUnitario: 50.0,
-                        cantidad: 21.0,
-                        estado: "Cortes",
-                        precioTotal: 150.0,
-                        isDelete: false,
-                      ),
                       ItemFormularioDetail(
                         imagen: 'assets/logo/logo_white.png',
                         titulo: "Unicornio",
@@ -74,7 +65,7 @@ class ScReceivedDetail extends StatelessWidget {
     );
   }
 
-  _showModalProductoProceso(context){
+  _showModalSaveConfirm(context){
     showModalBottomSheet(
       backgroundColor: Colors.transparent,
       context: context,
@@ -89,17 +80,5 @@ class ScReceivedDetail extends StatelessWidget {
     );
   }
 
-  /*_showModalFormulario(context){
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      builder: (BuildContext context) {
-        return ModalFormSend(
-          titulo: "Formulario de Envío",
-          subTitulo: "No se podran recuparar los datos.",
-          fn: (){},
-        );
-      },
-    );
-  }*/
+  
 }
