@@ -32,7 +32,7 @@ class ItemCard extends StatelessWidget {
               ),
               child: Hero(
                 tag: "${product.id}",
-                child: Image.asset(product.image),
+                child: Image.asset(product.imagen),
               ),
             ),
           ),
@@ -40,12 +40,12 @@ class ItemCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: getPadding20 / 4),
             child: Text(
               // products is out demo list
-              product.title,
+              product.nombre,
               style: TextStyle(color: kTextLightColor),
             ),
           ),
           Text(
-            "\$${product.price}",
+            "\$${product.precio}",
             style: TextStyle(fontWeight: FontWeight.bold),
           )
         ],

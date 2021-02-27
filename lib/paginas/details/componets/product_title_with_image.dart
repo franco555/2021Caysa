@@ -22,7 +22,7 @@ class ProductTitleWithImage extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
           Text(
-            product.title,
+            product.nombre,
             style: Theme.of(context)
                 .textTheme
                 .headline4
@@ -36,7 +36,7 @@ class ProductTitleWithImage extends StatelessWidget {
                   children: [
                     TextSpan(text: "Price\n"),
                     TextSpan(
-                      text: "\$${product.price}",
+                      text: "\$${product.precio}",
                       style: Theme.of(context).textTheme.headline4.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
@@ -48,7 +48,7 @@ class ProductTitleWithImage extends StatelessWidget {
                 child: Hero(
                   tag: "${product.id}",
                   child: Image.asset(
-                    product.image,
+                    product.imagen,
                     fit: BoxFit.fill,
                   ),
                 ),

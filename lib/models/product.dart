@@ -1,20 +1,33 @@
 import 'package:flutter/material.dart';
 
 class Product {
-  final String image, title, description;
-  final int price, size, id;
+  final int id;
+  final String imagen, nombre, description;
+  final double precio, cantidad;
   final Color color;
   Product({
     this.id,
-    this.image,
-    this.title,
-    this.price,
+    this.imagen,
+    this.nombre,
     this.description,
-    this.size,
+    this.precio,
+    this.cantidad,
     this.color,
   });
 }
 
+List<Product> products = [
+  Product(
+    id: 1244,
+    imagen: "assets/logo/logo_white.png",
+    nombre: "Goku",
+    description: "20cm x 30cm",
+    precio: 30.5,
+    cantidad: 69,
+    color: Colors.green[200]
+  )
+];
+/*
 List<Product> products = [
   Product(
       id: 1,
@@ -69,3 +82,4 @@ List<Product> products = [
 
 String dummyText =
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. When an unknown printer took a galley.";
+    */
