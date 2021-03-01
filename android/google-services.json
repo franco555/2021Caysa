@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "111162228298",
-    "project_id": "caysa-fc04e",
-    "storage_bucket": "caysa-fc04e.appspot.com"
+    "project_number": "553720186976",
+    "project_id": "caysa-2",
+    "storage_bucket": "caysa-2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:111162228298:android:514ccc0c1b25a03bd070b3",
+        "mobilesdk_app_id": "1:553720186976:android:367121e47a697438115b05",
         "android_client_info": {
           "package_name": "com.example.caysa2021"
         }
       },
       "oauth_client": [
         {
-          "client_id": "111162228298-u5f3in1bhl79rf9ltb763k5r1qmesp5l.apps.googleusercontent.com",
+          "client_id": "553720186976-nbo73u4ria3aukrmoffor53pfb3f6ik5.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.caysa2021",
@@ -22,20 +22,20 @@
           }
         },
         {
-          "client_id": "111162228298-ei080ott4n1uqjkun1ila9jl2j39142f.apps.googleusercontent.com",
+          "client_id": "553720186976-bqmuft26ieicr34hbpuhqv4t5jki57ne.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBdeO_TwjeDioOAS3v-sTIcB4Cn-Ot4XOY"
+          "current_key": "AIzaSyABexo3NjJfKdbyKr3WlUS34NTYZYf9TrI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "111162228298-ei080ott4n1uqjkun1ila9jl2j39142f.apps.googleusercontent.com",
+              "client_id": "553720186976-bqmuft26ieicr34hbpuhqv4t5jki57ne.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

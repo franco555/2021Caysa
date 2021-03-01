@@ -2,7 +2,6 @@ import 'package:caysa2021/constants/constants.dart';
 import 'package:caysa2021/models/product.dart';
 import 'package:flutter/material.dart';
 
-
 class ItemCard extends StatelessWidget {
   final Product product;
   final Function press;

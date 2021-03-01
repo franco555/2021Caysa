@@ -1,18 +1,12 @@
+import 'package:caysa2021/app/modules/splash/splash_binding.dart';
+import 'package:caysa2021/app/modules/splash/splash_page.dart';
+import 'package:caysa2021/app/routes/app_pages.dart';
+import 'package:caysa2021/app/utils/dependency_injection.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
-import 'package:caysa2021/dashBoard/Sc_DashBoard.dart';
-import 'package:caysa2021/dashBoard/test.dart';
-import 'package:caysa2021/received/scComprobante.dart';
-import 'package:caysa2021/received/scReceived.dart';
-import 'package:caysa2021/send/scSend.dart';
-import 'package:caysa2021/send/scSendDetail.dart';
-import 'package:caysa2021/send/scSendHistory.dart';
-import 'package:caysa2021/send/scSendReport.dart';
-import 'package:caysa2021/received/scReceivedDetail.dart';
-import 'package:caysa2021/received/scReceivedHistory.dart';
-import 'package:caysa2021/received/scReceivedReport.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 void main() {
+  DependencyInjection.init();
   runApp(MyApp());
 }
 
@@ -33,7 +27,10 @@ class _MyAppState extends State<MyApp> {
         primaryColor: CFr().getColorFondo(),
         scaffoldBackgroundColor: CFr().getColorFondo(),
       ),
-      home: ScDashBoard(),
+      home: SplashPage(),
+      initialBinding: SplashBinding(),
+      getPages: AppPages.pages,
+      /*home: ScDashBoard(),
       routes: <String, WidgetBuilder>{
         "/dashboard":(BuildContext context)=>new ScTest(),
         "/compra":(BuildContext context)=>new ScTest(),
@@ -52,7 +49,7 @@ class _MyAppState extends State<MyApp> {
         "/configuracion":(BuildContext context)=>new ScTest(),
         "/comprobante":(BuildContext context)=>new ScComprobante(),
         "/salir":(BuildContext context)=>new ScTest(),
-      },
+      },*/
     );
   }
 }
