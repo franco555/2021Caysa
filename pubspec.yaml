@@ -15,7 +15,8 @@ dependencies:
   #provider: ^4.3.3
   firebase_auth: ^0.20.0+1
   cloud_firestore: ^0.16.0
-  google_sign_in: ^4.5.9 
+  google_sign_in: ^4.5.9
+  flutter_signin_button: ^1.1.0
   get: ^3.24.0
   intl: ^0.16.1
   cupertino_icons: ^1.0.0

@@ -1,7 +1,6 @@
 import 'package:caysa2021/app/data/models/request_token.dart';
 import 'package:caysa2021/app/data/repositories/local/local_auth_repository.dart';
 import 'package:caysa2021/app/data/repositories/remote/authentication_repository.dart';
-import 'package:caysa2021/app/routes/app_pages.dart';
 import 'package:caysa2021/app/routes/app_routes.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -49,6 +48,19 @@ class LoginController extends GetxController{
              TextButton(onPressed: (){Get.back();}, child: Text("OK"))
            ],
          ));
+         /*
+         Get.snackbar(
+        "Error", 
+        "Fijate si tienes conexion a internet",
+        snackPosition: SnackPosition.BOTTOM,
+        icon: Icon(Icons.warning, color: CF.colorTextSnackBarSplash(),), 
+        shouldIconPulse: true,
+        isDismissible: true,
+        duration: Duration(seconds: 3),
+        colorText: CF.colorTextSnackBarSplash(),
+        backgroundColor: CF.colorDanger()
+      );
+          */
      }
    }
 

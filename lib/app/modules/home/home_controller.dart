@@ -20,6 +20,7 @@ class HomeController extends GetxController{
   @override
   void onReady(){
     load();
+    super.onReady();
   }
 
   Future<void>load()async{

@@ -2,6 +2,8 @@ import 'package:caysa2021/app/modules/login/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'local_widgets/splash_body_widget.dart';
+
 class LoginPage extends StatelessWidget {
 
  const LoginPage ({Key key}):super(key: key);
@@ -10,10 +12,9 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<LoginController>(
       builder: (_)=>Scaffold(
-        body: SafeArea(
-          child: GestureDetector(
+        body: GestureDetector(
             onTap: ()=>FocusScope.of(context).unfocus(),
-            child: Container(
+            child: /*Container(
               color: Colors.transparent,
               padding: EdgeInsets.all(20),
               width: double.infinity,
@@ -36,11 +37,11 @@ class LoginPage extends StatelessWidget {
                     child: Text("Ingresar"),                    
                   )
                 ],
-              ) ,
-            ),
-          ),
+              ) ,,*/
+              SplashBodyWidget()
+          
+          )
         ),
-      ),
     );
   }
 }

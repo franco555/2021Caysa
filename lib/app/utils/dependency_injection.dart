@@ -11,7 +11,7 @@ import 'package:get/get.dart';
 class DependencyInjection{
   static void init(){
     Get.lazyPut<FlutterSecureStorage>(()=>FlutterSecureStorage(),fenix: true);
-    Get.lazyPut<Dio>(()=>Dio(BaseOptions(baseUrl: "https://api.themoviedb.org/3")));
+    Get.lazyPut<Dio>(()=>Dio(BaseOptions(baseUrl: "https://api.themoviedb.org/3")),fenix: true);
 
     //dependencias
     Get.lazyPut<AuthenticationApi>(()=>AuthenticationApi(),fenix: true);
