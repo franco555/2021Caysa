@@ -1,4 +1,4 @@
-import 'package:caysa2021/app/modules/login/login_controller.dart';
+import 'package:caysa2021/app/modules/auth/login/login_controller.dart';
 import 'package:get/get.dart';
 
 class LoginBinding extends Bindings{

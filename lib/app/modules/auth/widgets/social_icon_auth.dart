@@ -2,10 +2,10 @@ import 'package:caysa2021/app/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SocalIcon extends StatelessWidget {
+class SocialIconAuth extends StatelessWidget {
   final String iconSrc;
   final Function press;
-  const SocalIcon({
+  const SocialIconAuth({
     Key key,
     this.iconSrc,
     this.press,

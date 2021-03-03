@@ -2,6 +2,7 @@ import 'package:caysa2021/app/data/models/request_token.dart';
 import 'package:caysa2021/app/data/repositories/local/local_auth_repository.dart';
 import 'package:caysa2021/app/data/repositories/remote/authentication_repository.dart';
 import 'package:caysa2021/app/routes/app_routes.dart';
+import 'package:caysa2021/app/utils/colors.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,16 +13,19 @@ class LoginController extends GetxController{
   final LocalAuthRepository _localAuthRepository=Get.find<LocalAuthRepository>();
 
   String _username="", _password="";
+  RxBool seePassword=true.obs;
 
-   void onUsernameChanged(String text){
-     _username=text;
-   }
+   void onUsernameChanged(String text){ _username=text;}
+   void onPasswordChanged(String text){_password=text;}
 
-   void onPasswordChanged(String text){
-     _password=text;
-   }
+   void setShowPassword(){seePassword.value=!seePassword.value;}
 
    Future<void> submit() async{
+      if(this._username.trim()=="" || this._password.trim()==""){
+        sanckBar();
+        return;
+      }
+
       try {
         RequestToken requestToken= await _authenticationRepository.newRequestToken();
         final RequestToken authRequestToken=await _authenticationRepository.authWithLogin(
@@ -32,26 +36,45 @@ class LoginController extends GetxController{
         await _localAuthRepository.setSession(authRequestToken);
         Get.offNamed(AppRoutes.HOME);
       } catch (e) {
-      String message;
+        String titulo="Error";
+        String message;
        if(e is DioError){
          if(e.response!= null){
           message=e.response.statusMessage;
+          if(message=="Unauthorized"){
+            titulo="Credenciales Incorrectos";
+            message='Usuario o contraseña son incorrectos';
+          }
          }else{
            message=e.message;
          }
        }
        Get.dialog(
          AlertDialog(
-           title: Text("Error"),
+           title: Text(titulo,style: TextStyle(color: Color(0xFF1A1F1D)),),
            content: Text(message),
+           shape: RoundedRectangleBorder(
+             borderRadius:BorderRadius.all(Radius.circular(15)),
+
+            ),
+           backgroundColor: CF.colorTextAlert(),
+           elevation: 2,
            actions: [
-             TextButton(onPressed: (){Get.back();}, child: Text("OK"))
+             OutlineButton(
+               color: Colors.black,
+               onPressed: (){Get.back();}, 
+               child: Text("OK",style: TextStyle(color: Color(0xFF1A1F1D))))
            ],
-         ));
-         /*
-         Get.snackbar(
-        "Error", 
-        "Fijate si tienes conexion a internet",
+         )
+         
+         );
+     }
+   }
+
+   void sanckBar(){
+     Get.snackbar(
+        "Cuidado", 
+        "Se necesita Usuario y Contraseña",
         snackPosition: SnackPosition.BOTTOM,
         icon: Icon(Icons.warning, color: CF.colorTextSnackBarSplash(),), 
         shouldIconPulse: true,
@@ -60,8 +83,13 @@ class LoginController extends GetxController{
         colorText: CF.colorTextSnackBarSplash(),
         backgroundColor: CF.colorDanger()
       );
-          */
-     }
    }
 
+  void goForgotPasword(){
+    Get.toNamed(AppRoutes.FORGOTPASSWORD);
+  }
+
+  void goCreateAccount(){
+    Get.toNamed(AppRoutes.CREATEACCOUNT);
+  }
 }
