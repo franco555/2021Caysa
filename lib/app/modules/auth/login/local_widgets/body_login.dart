@@ -1,5 +1,5 @@
 import 'package:caysa2021/app/modules/auth/login/local_widgets/decoration/background_login.dart';
-import 'package:caysa2021/app/modules/auth/login/local_widgets/dinamic/create_account_login.dart';
+import 'package:caysa2021/app/modules/auth/widgets/go_login_or_Create_auth.dart';
 import 'package:caysa2021/app/modules/auth/widgets/rounded_button_auth.dart';
 import 'package:caysa2021/app/modules/auth/widgets/text_field_auth.dart';
 import 'package:caysa2021/app/modules/auth/login/local_widgets/dinamic/forgotPassword_login.dart';
@@ -38,7 +38,7 @@ class BodyLogin extends StatelessWidget {
               SizedBox(height: 20.0),
               RoundedButtonAuth(color: CF.colorInfo(), fw: FontWeight.w400,sizeText: 16, text: "Iniciar", press: _.submit,),
               SizedBox(height: 20.0),
-              CreateAccountLogin(press:_.goCreateAccount,),
+              GoLoginOrCreateAuth(login: true,press:_.goCreateAccount,),
               SizedBox(height: 20.0),
               OrDividerLogin(),
               

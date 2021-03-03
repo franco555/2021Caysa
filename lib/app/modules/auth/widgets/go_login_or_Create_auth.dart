@@ -1,10 +1,10 @@
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:flutter/material.dart';
 
-class CreateAccountLogin extends StatelessWidget {
+class GoLoginOrCreateAuth extends StatelessWidget {
   final bool login;
   final Function press;
-  const CreateAccountLogin({
+  const GoLoginOrCreateAuth({
     Key key,
     this.login = true,
     this.press,

@@ -1,6 +1,6 @@
 import 'package:caysa2021/app/modules/auth/forgotpassword/forgotpassword_controller.dart';
 import 'package:caysa2021/app/modules/auth/forgotpassword/widgets/decoration/background_forgotpassword.dart';
-import 'package:caysa2021/app/modules/auth/login/local_widgets/dinamic/goLogin_login.dart';
+import 'package:caysa2021/app/modules/auth/widgets/go_login_or_Create_auth.dart';
 import 'package:caysa2021/app/modules/auth/widgets/rounded_button_auth.dart';
 import 'package:caysa2021/app/modules/auth/widgets/text_field_auth.dart';
 import 'package:caysa2021/app/modules/auth/widgets/titles_auth.dart';
@@ -29,7 +29,7 @@ class BodyForgotPassword extends StatelessWidget {
                 TitlesAuth(title:"Recuperar Contraseña"),
                 RoundedInputFieldAuth(hintText: "Email", onChanged: _.onEmailChanged,),
                 RoundedButtonAuth(color: CF.colorInfo(),fw: FontWeight.w400,sizeText: 16,text: "Enviar", press: _.submitForgotPassword, ),
-                GoLogin( press: _.goLogin),
+                GoLoginOrCreateAuth(login: false ,press: _.goLogin),
               ],
             ),
           ),
