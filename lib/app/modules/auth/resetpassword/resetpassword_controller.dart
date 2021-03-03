@@ -3,41 +3,32 @@ import 'package:caysa2021/app/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ForgotPasswordController extends GetxController{
+class ResetPasswordController extends GetxController{
   
-  String _email="";
+  String _code="";
 
-  void onEmailChanged(String text){ _email=text;}
+  void onCodeChanged(String text){ _code=text;}
 
   void submitForgotPassword(){
-    if(this._email.trim()==""){ 
-      snackBarPersonal("Se necesita un E-mail");
+    if(this._code.trim()==""){ 
+      snackBarPersonal("Error","Ingrese Código");
       return;
     }
-
-    bool emailValid = RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(this._email);
-    
-    if(emailValid){
-      goResetPassword();
+    if(this._code.length==8){
+      Get.offNamed(AppRoutes.HOME);
     }else{
-      snackBarPersonal("E-mail inválido");
+      snackBarPersonal("Error","El código es de 8 dígitos");
       return;
     }
-    print(this._email);
+    print(this._code);
   }
 
   void goLogin(){
     Get.toNamed(AppRoutes.LOGIN);
   }
-
-  void goResetPassword(){
-    Get.toNamed(AppRoutes.RESETPASSWORD);
-  }
-
-  void snackBarPersonal(String msg){
-     Get.snackbar(
-        "Cuidado!", 
-        msg,
+ 
+  void snackBarPersonal(String title ,String msg){
+     Get.snackbar(title,  msg,
         snackPosition: SnackPosition.BOTTOM,
         icon: Icon(Icons.warning, color: CF.colorTextSnackBarSplash(),), 
         shouldIconPulse: true,

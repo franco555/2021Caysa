@@ -2,6 +2,8 @@ import 'package:caysa2021/app/modules/auth/createaccount/createaccount_page.dart
 import 'package:caysa2021/app/modules/auth/createaccount/createaccount_binding.dart';
 import 'package:caysa2021/app/modules/auth/forgotpassword/forgotpassword_binding.dart';
 import 'package:caysa2021/app/modules/auth/forgotpassword/forgotpassword_page.dart';
+import 'package:caysa2021/app/modules/auth/resetpassword/resetpassword_binding.dart';
+import 'package:caysa2021/app/modules/auth/resetpassword/resetpassword_page.dart';
 import 'package:caysa2021/app/modules/detail/detail_binding.dart';
 import 'package:caysa2021/app/modules/detail/detail_page.dart';
 import 'package:caysa2021/app/modules/home/home_binding.dart';
@@ -25,10 +27,15 @@ class AppPages{
        page:()=> LoginPage(),
        binding: LoginBinding()
     ),
-    GetPage(//------------------------------------- ForgotPassword
+    GetPage(//------------------------------------- Forgot Password
        name: AppRoutes.FORGOTPASSWORD,
        page:()=> ForgotPasswordPage(),
        binding: ForgotPasswordBinding()
+    ),
+    GetPage(//------------------------------------- Reset Password
+       name: AppRoutes.RESETPASSWORD,
+       page:()=> ResetPasswordPage(),
+       binding: ResetPasswordBinding()
     ),
     GetPage(//------------------------------------- Create Account
        name: AppRoutes.CREATEACCOUNT,
