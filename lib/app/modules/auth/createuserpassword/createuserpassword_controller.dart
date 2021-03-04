@@ -1,7 +1,7 @@
 import 'package:caysa2021/app/routes/app_routes.dart';
 import 'package:get/get.dart';
 
-class CreateAccountController extends GetxController{
+class CreateUserPasswordController extends GetxController{
   String _name="", _lastname="", _address="", _dni="", _email="", _phone="", _username="", _password="";
 
    void onNameChanged(String text){ this._name=text;}

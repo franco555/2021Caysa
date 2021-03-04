@@ -20,12 +20,8 @@ class RoundedInputFieldAuth extends StatelessWidget {
         onChanged: onChanged,
         cursorColor: fcolorTxt900,
         decoration: InputDecoration(
-          icon: Icon(
-            icon,
-            color: fcolorTxt900,
-          ),
-          hintText: hintText,
-          border: InputBorder.none,
+          icon: Icon(icon,color: fcolorTxt900, ),
+          hintText: hintText,border: InputBorder.none,
         ),
       ),
     );

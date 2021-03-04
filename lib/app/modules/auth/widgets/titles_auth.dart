@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 class TitlesAuth extends StatelessWidget {
 
   final String title;
-  const TitlesAuth({Key key, this.title}) : super(key: key);
+  final double sz;
+  const TitlesAuth({Key key, this.title, this.sz=30}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class TitlesAuth extends StatelessWidget {
         style: TextStyle(
           fontWeight: FontWeight.bold, 
           color: CF.colorInfo(), 
-          fontSize: 30.0
+          fontSize: sz
         ),
       ),
     );
