@@ -15,7 +15,8 @@ class ResetPasswordController extends GetxController{
       return;
     }
     if(this._code.length==8){
-      Get.offNamed(AppRoutes.HOME);
+      //Get.offNamed(AppRoutes.HOME);
+      Get.offNamedUntil(AppRoutes.HOME,(_)=>false);
     }else{
       snackBarPersonal("Error","El código es de 8 dígitos");
       return;
