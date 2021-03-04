@@ -6,6 +6,7 @@ class AppRoutes{
    static const FORGOTPASSWORD="forgotpassword";
    static const RESETPASSWORD="resetpassword";
    static const CREATEACCOUNT="createaccount";
+   static const CREATE_USERPASSWORD="createauserpassword";
    
    static const DETAIL="detail";
 }
