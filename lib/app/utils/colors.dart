@@ -6,6 +6,10 @@ class CF{
   static colorBackgroundRedSplash()=>Color(0xFFBF0426);
   static colorTextSnackBarSplash()=>Color(0XFFCCFBFC);
 
+  static colorFondo()=>Color(0xFF123E59);
+  static colorTextAppBar()=>Color(0XFFCCFBFC);
+  static colorTextSalir()=>Color(0XffF28599);
+
   static colorDanger()=>Color(0xFFF35D5C);
   static colorSuccess()=>Color(0xFF20B145);
   static colorSuccess2()=>Color(0xFF52FA87);
