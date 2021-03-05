@@ -20,7 +20,7 @@ class SplashPage extends StatelessWidget {
           color: CF.colorBackgroundBlueSplash2(),
           child: Center(
             child: SvgPicture.asset(
-              Constants.LOGO_WITH_NAME_WHITE,
+              Constants.LOGO_WITH_NAME_WHITE_SVG,
               height: size.width * 0.35,
             ),
           ),

@@ -23,7 +23,7 @@ class BodyCreateAccount extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[              
-              SvgPicture.asset(Constants.LOGO_WITH_NAME_WHITE,height: 100.0, ),
+              SvgPicture.asset(Constants.LOGO_WITH_NAME_WHITE_SVG,height: 100.0, ),
               TitlesAuth(title:"CREAR CUENTA",sz: 18,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

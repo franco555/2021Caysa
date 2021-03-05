@@ -29,7 +29,7 @@ class BodyLogin extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[              
-              SvgPicture.asset(Constants.LOGO_WITH_NAME_WHITE,height: 150.0, ),
+              SvgPicture.asset(Constants.LOGO_WITH_NAME_WHITE_SVG,height: 150.0, ),
               TitlesAuth(title:"LOGIN"),
               
               RoundedInputFieldAuth(hintText: "Usuario",onChanged: _.onUsernameChanged,),            

@@ -25,7 +25,7 @@ class BodyForgotPassword extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SvgPicture.asset(Constants.LOGO_WITH_NAME_WHITE,height: 150.0,),
+                SvgPicture.asset(Constants.LOGO_WITH_NAME_WHITE_SVG,height: 150.0,),
                 TitlesAuth(title:"Recuperar Contraseña"),
                 RoundedInputFieldAuth(hintText: "Email", onChanged: _.onEmailChanged,),
                 RoundedButtonAuth(color: CF.colorInfo(),fw: FontWeight.w400,sizeText: 16,text: "Enviar", press: _.submitForgotPassword, ),
