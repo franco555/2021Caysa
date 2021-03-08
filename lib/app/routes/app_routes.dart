@@ -9,4 +9,6 @@ class AppRoutes{
    static const CREATE_USERPASSWORD="createauserpassword";
    
    static const DETAIL="detail";
+
+   static const PROFILE="profile";
 }

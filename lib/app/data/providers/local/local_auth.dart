@@ -7,8 +7,29 @@ import 'package:get/get.dart';
 
 class LocalAuth{
   static const KEY="session";
+  static const KEY_MODO="mode";
   final FlutterSecureStorage _storage=Get.find<FlutterSecureStorage>();
 
+  //Modo
+  Future<void> setModo(String modo)async {
+    await _storage.write(key: KEY_MODO, value: modo);
+  }
+
+  Future<void> clearModo()async {
+    await _storage.delete(key: KEY_MODO);
+  }
+
+  Future<bool> getModo()async {
+    final String data= await _storage.read(key: KEY_MODO);
+    if(data!=null){
+      return data=="Oscuro"? true:false;
+    }
+
+    setModo("Claro");
+    return false;
+  }
+
+  //Token en el dispositivo
   Future<void> setSession(RequestToken requestToken)async {
     await _storage.write(key: KEY, value: jsonEncode(requestToken.toJson()));
   }

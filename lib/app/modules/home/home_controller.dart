@@ -1,6 +1,7 @@
 import 'package:caysa2021/app/data/models/movie.dart';
 import 'package:caysa2021/app/data/repositories/local/local_auth_repository.dart';
 import 'package:caysa2021/app/data/repositories/remote/movies_repository.dart';
+import 'package:caysa2021/app/routes/app_routes.dart';
 import 'package:caysa2021/app/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -35,7 +36,7 @@ class HomeController extends GetxController{
   }
 
   //nav
-  void goEditAccount(){snackBarPersonal("Estas en editar cuenta","aun no implementado"); }
+  void goEditAccount(){Get.toNamed(AppRoutes.PROFILE); }
   void goHome(){snackBarPersonal("Estas en Home","aun no implementado"); }
   void goPurchase(){snackBarPersonal("Estas en Compra","aun no implementado"); }
   void goSale(){snackBarPersonal("Estas en venta","aun no implementado"); }

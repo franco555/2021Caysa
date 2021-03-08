@@ -1,6 +1,6 @@
 import 'package:caysa2021/app/global_widgets/chart/weekly_chart.dart';
+import 'package:caysa2021/app/global_widgets/titles/title_with_icon.dart';
 import 'package:caysa2021/app/utils/colors.dart';
-import 'package:caysa2021/components/other/tituloSeccionWithIcono.dart';
 import 'package:caysa2021/constants/constant_fr_color.dart';
 import 'package:caysa2021/constants/constants.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +31,7 @@ class BodyHome extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child:Column(
                 children: [
-                  TituloSeccionWithIcono(
+                  TituloWithIcono(
                     icono: Icons.history,
                     titulo: "Historial",
                     color: CFr().getColorBtnLogin(),

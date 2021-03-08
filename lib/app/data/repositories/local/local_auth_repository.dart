@@ -10,4 +10,8 @@ class LocalAuthRepository{
   Future<void> clearSession()=>_localAuth.clearSession();
 
   Future<RequestToken> get session=>_localAuth.getSession();
+
+  Future<void> setModo(String modo)=>_localAuth.setModo(modo);
+  Future<void> clearModo()=>_localAuth.clearModo();
+  Future<bool> get modo=>_localAuth.getModo();
 }
