@@ -6,8 +6,9 @@ class AppBarWithButtomDown extends StatelessWidget with  PreferredSizeWidget{
   final String tituloNav;
   final String subTituloNav;
   final Color colortext;
+  final Color colorFondo;
   final List<Widget> btnAppBarAction;
-  final Widget btnAppBarDow;
+  final Widget btnAppBarDown;
   final double altoAppBar;
 
   const AppBarWithButtomDown({
@@ -15,8 +16,9 @@ class AppBarWithButtomDown extends StatelessWidget with  PreferredSizeWidget{
     this.tituloNav,
     this.subTituloNav,
     this.colortext,
+    this.colorFondo,
     this.btnAppBarAction,
-    this.btnAppBarDow,
+    this.btnAppBarDown,
     this.altoAppBar
   }) : super(key: key);
 
@@ -36,16 +38,16 @@ class AppBarWithButtomDown extends StatelessWidget with  PreferredSizeWidget{
             Text(subTituloNav,style: TextStyle(color: colortext, fontSize: 12.0,fontWeight: FontWeight.w400),)
           ],
         ),
-        backgroundColor: CF.colorFondo(),
-        elevation:1,
+        backgroundColor: colorFondo,
+        //elevation:2,
         actions: btnAppBarAction,
         bottom: altoAppBar == 60.0? null : PreferredSize(
           preferredSize: Size.fromHeight(60),
           child: Container(
-            decoration: lineaHBottom(colortext,CF.colorFondo()),
+            decoration: lineaHBottom(CF.colorFondoBold(),CF.colorFondo()),
             padding:  EdgeInsets.symmetric(vertical: 10, horizontal: 10),
             width: _size.width,
-            child: btnAppBarDow,
+            child: btnAppBarDown,
           )
         ),
       ),      

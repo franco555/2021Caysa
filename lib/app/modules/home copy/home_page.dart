@@ -1,6 +1,6 @@
 import 'package:caysa2021/app/data/models/movie.dart';
 import 'package:caysa2021/app/modules/home/home_controller.dart';
-import 'package:caysa2021/app/modules/home/local_widgets/movie_item.dart';
+import 'package:caysa2021/app/modules/home copy/local_widgets/movie_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
