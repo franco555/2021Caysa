@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 class ProfileController extends GetxController{
   final LocalAuthRepository _localAuthRepository=Get.find<LocalAuthRepository>();
 
+  
+  RxBool _swithMode=false.obs;
   Rx<UserModel> _userModel= UserModel(
     id: "0",
     name: "Franco", 
@@ -14,11 +16,8 @@ class ProfileController extends GetxController{
     email: "franco@gmail.com", 
     phone:"1122344991", 
     username: "Franckito", 
-    password: "12345", 
+    password: "*****", 
   ).obs;
-
-  RxBool _swithMode=false.obs;
-  RxMap<String, dynamic> _userMap=Map<String, dynamic>().obs;
 
   bool get getSwith=>this._swithMode.value;
 
@@ -53,8 +52,7 @@ class ProfileController extends GetxController{
   }
 
   void saveProfile(){
-    print(_userMap['name']);
-    update();
+    print(name);
     Get.back();
   }
 

@@ -38,7 +38,7 @@ class HomeProfile extends StatelessWidget {
                     child: Column(
                       children: [
                         Obx(()=>rowDatosPersonales("Usuario",_.username,_.onUseNameChanged,_.saveProfile)),
-                        Obx(()=>rowDatosPersonales("Password","****",_.onPasswordChanged,_.saveProfile)),
+                        Obx(()=>rowDatosPersonales("Password",_.password,_.onPasswordChanged,_.saveProfile)),
                       ],
                     ),
                   ),
