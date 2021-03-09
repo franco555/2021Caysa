@@ -27,7 +27,6 @@ class CreateAccountController extends GetxController{
       phone: validateInput(_phone), 
       username: "", 
       password: "", 
-      repitpassword: ""
     );
 
     if(isEmpty){

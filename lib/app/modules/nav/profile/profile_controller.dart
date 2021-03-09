@@ -5,22 +5,41 @@ import 'package:get/get.dart';
 class ProfileController extends GetxController{
   final LocalAuthRepository _localAuthRepository=Get.find<LocalAuthRepository>();
 
-  UserModel _userModel;
+  Rx<UserModel> _userModel= UserModel(
+    id: "0",
+    name: "Franco", 
+    lastname:"Caysahuana", 
+    address: "La villa", 
+    dni: "46002418", 
+    email: "franco@gmail.com", 
+    phone:"1122344991", 
+    username: "Franckito", 
+    password: "12345", 
+  ).obs;
 
   RxBool _swithMode=false.obs;
   RxMap<String, dynamic> _userMap=Map<String, dynamic>().obs;
 
   bool get getSwith=>this._swithMode.value;
 
-  /*get name=>this._userModel.name;
-  get lastname=>this._userModel.lastname;
-  get dni=>this._userModel.dni;
-  get address=>this._userModel.address;
-  get email=>this._userModel.email;
-  get phone=>this._userModel.phone;
-  get username=>this._userModel.username;*/
+  get name=>this._userModel.value.name;
+  get lastname=>this._userModel.value.lastname;
+  get dni=>this._userModel.value.dni;
+  get address=>this._userModel.value.address;
+  get email=>this._userModel.value.email;
+  get phone=>this._userModel.value.phone;
+  get username=>this._userModel.value.username;
 
-  get name=>this._userMap['name'];
+  void onNameChanged(String text){ this._userModel.value=_userModel.value.copyWith(name: text);}
+  void onLastNameChanged(String text){ this._userModel.value.lastname=text;}
+  void onAddressChanged(String text){ this._userModel.value.address=text;}
+  void onDNIChanged(String text){this._userModel.value.dni=text;}
+  void onEmailChanged(String text){ this._userModel.value.email=text;}
+  void onPhoneChanged(String text){ this._userModel.value.phone=text;}
+  void onUseNameChanged(String text){ this._userModel.value.username=text;}
+  void onPasswordChanged(String text){ this._userModel.value.password=text;}
+
+  /*get name=>this._userMap['name'];
   get lastname=>this._userMap['lastname'];
   get dni=>this._userMap['dni'];
   get address=>this._userMap['address'];
@@ -36,7 +55,7 @@ class ProfileController extends GetxController{
   void onEmailChanged(String text){ this._userMap['email']=text;}
   void onPhoneChanged(String text){ this._userMap['phone']=text;}
   void onUseNameChanged(String text){ this._userMap['username']=text;}
-  void onPasswordChanged(String text){ this._userMap['password']=text;}
+  void onPasswordChanged(String text){ this._userMap['password']=text;}*/
 
   Future<void> changeSwith() async { 
     this._swithMode.value=!_swithMode.value;
@@ -69,34 +88,10 @@ class ProfileController extends GetxController{
     super.onInit();
     getStateSwitch();
     loadUser();
-    loadUserMap();
   }
 
-  void loadUser(){
-    final UserModel createAccount=new UserModel(
-      id: "0",
-      name: "Franco", 
-      lastname:"Caysahuana", 
-      address: "La villa", 
-      dni: "46002418", 
-      email: "franco@gmail.com", 
-      phone:"1122344991", 
-      username: "Franckito", 
-      password: "12345", 
-      repitpassword: "12345"
-    );
-    _userModel=createAccount;
-  }
+  loadUser(){
 
-  void loadUserMap(){
-    _userMap['id']=_userModel.id;
-    _userMap['name']=_userModel.name;
-    _userMap['lastname']=_userModel.lastname;
-    _userMap['address']=_userModel.address;
-    _userMap['email']=_userModel.email;
-    _userMap['phone']=_userModel.phone;
-    _userMap['username']=_userModel.username;
-    _userMap['password']=_userModel.password;
   }
 
 }

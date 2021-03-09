@@ -11,7 +11,6 @@ class UserModel{
       @required this.phone,
       @required this.username,
       @required this.password,
-      @required this.repitpassword,
     });
 
     final String id;
@@ -23,7 +22,29 @@ class UserModel{
     String phone;
     String username;
     String password;
-    String repitpassword;
+
+    UserModel copyWith({
+      String name,
+      String lastname,
+      String address,
+      String dni,
+      String email,
+      String phone,
+      String username,
+      String password,
+    }){
+      return UserModel(
+        id: id??this.id,
+         name:name??this.name,
+         lastname:lastname??this.lastname,
+         address:address??this.address,
+         dni:dni??this.dni,
+         email:email??this.email,
+         phone:phone??this.phone,
+         username:username??this.username,
+         password:password??this.password
+      );
+    }
 
     factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
       id: json["id"],
@@ -35,7 +56,6 @@ class UserModel{
       phone: json["phone"],
       username: json["username"],
       password: json["password"],
-      repitpassword: json["repitpassword"],
     );
 
     Map<String, dynamic> toJson() => {
@@ -47,6 +67,5 @@ class UserModel{
         "phone": phone,
         "username": username,
         "password": password,
-        "repitpassword": repitpassword,
     };
 }

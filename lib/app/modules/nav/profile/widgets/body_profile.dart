@@ -23,7 +23,10 @@ class HomeProfile extends StatelessWidget {
                     padding: const EdgeInsets.only(left:20,top:1,right: 10,bottom:1),
                     child: Column(
                       children: [
-                        rowDatosPersonales("Nombre",_.name??"s",_.onNameChanged,_.saveProfile),
+                        Obx(
+                          ()=>rowDatosPersonales("Nombre",_.name??"s",_.onNameChanged,_.saveProfile)
+                        )
+                        ,
                         rowDatosPersonales("Apellido",_.lastname??"s",null,_.saveProfile),
                         rowDatosPersonales("DNI",_.dni??"s",null,_.saveProfile),
                         rowDatosPersonales("Direcion",_.address??"s",null,_.saveProfile),
