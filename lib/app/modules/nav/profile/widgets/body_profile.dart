@@ -23,15 +23,12 @@ class HomeProfile extends StatelessWidget {
                     padding: const EdgeInsets.only(left:20,top:1,right: 10,bottom:1),
                     child: Column(
                       children: [
-                        Obx(
-                          ()=>rowDatosPersonales("Nombre",_.name??"s",_.onNameChanged,_.saveProfile)
-                        )
-                        ,
-                        rowDatosPersonales("Apellido",_.lastname??"s",null,_.saveProfile),
-                        rowDatosPersonales("DNI",_.dni??"s",null,_.saveProfile),
-                        rowDatosPersonales("Direcion",_.address??"s",null,_.saveProfile),
-                        rowDatosPersonales("Email",_.email??"s",null,_.saveProfile),
-                        rowDatosPersonales("Telefono",_.phone??"s",null,_.saveProfile),
+                        Obx(()=>rowDatosPersonales("Nombre",_.name,_.onNameChanged,_.saveProfile)),
+                        Obx(()=>rowDatosPersonales("Apellido",_.lastname,_.onLastNameChanged,_.saveProfile)),
+                        Obx(()=>rowDatosPersonales("DNI",_.dni,_.onDNIChanged,_.saveProfile)),
+                        Obx(()=>rowDatosPersonales("Dirección",_.address,_.onAddressChanged,_.saveProfile)),
+                        Obx(()=>rowDatosPersonales("Email",_.email,_.onEmailChanged,_.saveProfile)),
+                        Obx(()=>rowDatosPersonales("Teléfono",_.phone,_.onPhoneChanged,_.saveProfile)),
                       ],
                     ),
                   ),
@@ -40,8 +37,8 @@ class HomeProfile extends StatelessWidget {
                     padding: const EdgeInsets.only(left:20,top:1,right: 10,bottom:1),
                     child: Column(
                       children: [
-                        rowDatosPersonales("Usuario",_.username??"s",null,_.saveProfile),
-                        rowDatosPersonales("Password","****",null,_.saveProfile),
+                        Obx(()=>rowDatosPersonales("Usuario",_.username,_.onUseNameChanged,_.saveProfile)),
+                        Obx(()=>rowDatosPersonales("Password","****",_.onPasswordChanged,_.saveProfile)),
                       ],
                     ),
                   ),

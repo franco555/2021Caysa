@@ -7,7 +7,7 @@ class ModalProfile{
   void getDialog(String text, Function onChanged, onPress){
     Get.defaultDialog(
       actions: <Widget>[
-        FlatButton(child: new Text("Cancelar"),onPressed:(){Get.back();},),
+        FlatButton(child: new Text("Cancelar"),onPressed:(){ Get.back(); onChanged(text);},),
         VerticalDivider(),
         FlatButton(child: new Text("Guardar"),onPressed:onPress,),
       ],
