@@ -18,7 +18,7 @@ class TituloWithLine extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(5),
       width: double.maxFinite,
       decoration: BoxDecoration(
         boxShadow: [

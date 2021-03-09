@@ -1,6 +1,7 @@
 import 'package:caysa2021/app/global_widgets/titles/title_with_line.dart';
 import 'package:caysa2021/app/modules/nav/profile/profile_controller.dart';
 import 'package:caysa2021/app/modules/nav/profile/widgets/decoration/decoration_body.dart';
+import 'package:caysa2021/app/modules/nav/profile/widgets/modal_profile.dart';
 import 'package:caysa2021/app/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,12 +23,12 @@ class HomeProfile extends StatelessWidget {
                     padding: const EdgeInsets.only(left:20,top:1,right: 10,bottom:1),
                     child: Column(
                       children: [
-                        rowDatosPersonales("Nombre","Franco ",_.getModo),
-                        rowDatosPersonales("Apellido","Caysahuana Ch",null),
-                        rowDatosPersonales("DNI","531498165",null),
-                        rowDatosPersonales("Direcion","La villa 1-14",null),
-                        rowDatosPersonales("Email","Franco@gmail.com",null),
-                        rowDatosPersonales("Telefono","1198165158",null),
+                        rowDatosPersonales("Nombre",_.name??"s",_.onNameChanged,_.saveProfile),
+                        rowDatosPersonales("Apellido",_.lastname??"s",null,_.saveProfile),
+                        rowDatosPersonales("DNI",_.dni??"s",null,_.saveProfile),
+                        rowDatosPersonales("Direcion",_.address??"s",null,_.saveProfile),
+                        rowDatosPersonales("Email",_.email??"s",null,_.saveProfile),
+                        rowDatosPersonales("Telefono",_.phone??"s",null,_.saveProfile),
                       ],
                     ),
                   ),
@@ -36,8 +37,8 @@ class HomeProfile extends StatelessWidget {
                     padding: const EdgeInsets.only(left:20,top:1,right: 10,bottom:1),
                     child: Column(
                       children: [
-                        rowDatosPersonales("Usuario","Franco26 ",null),
-                        rowDatosPersonales("Password","****",null),
+                        rowDatosPersonales("Usuario",_.username??"s",null,_.saveProfile),
+                        rowDatosPersonales("Password","****",null,_.saveProfile),
                       ],
                     ),
                   ),
@@ -67,7 +68,9 @@ class HomeProfile extends StatelessWidget {
     );
   }
 
-  Row rowDatosPersonales(String label, String text, Function fn){
+  
+
+  Row rowDatosPersonales(String label, String text,Function  onChange, Function onPress){
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -77,7 +80,9 @@ class HomeProfile extends StatelessWidget {
             Text(text, style: TextStyle(color: CF.colorSuccess2()),),
           ],
         ),
-        IconButton(icon: Icon(Icons.edit, color: CF.colorSuccess2(),), onPressed: fn)
+        IconButton(icon: Icon(Icons.edit, color: CF.colorSuccess2(),), 
+          onPressed: ()=>ModalProfile().getDialog(text,onChange, onPress)
+        )
       ],
     );
   }

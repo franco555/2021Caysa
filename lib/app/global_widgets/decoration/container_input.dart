@@ -1,13 +1,14 @@
-import 'package:caysa2021/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class DecorationContainerInput extends StatelessWidget {
   final Widget child;
   final double radio;
+  final Color color;
   const DecorationContainerInput({
     Key key,
     this.child,
     this.radio=30,
+    this.color,
   }) : super(key: key);
 
   @override
@@ -17,7 +18,7 @@ class DecorationContainerInput extends StatelessWidget {
       padding: EdgeInsets.all(2),
       width: double.infinity,
       decoration: BoxDecoration(
-        color: kPrimaryLightColor,
+        color: color,
         borderRadius: BorderRadius.circular(radio),
       ),
       child: child,

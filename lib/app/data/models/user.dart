@@ -15,12 +15,12 @@ class UserModel{
     });
 
     final String id;
-    final String name;
-    final String lastname;
-    final String address;
-    final String dni;
-    final String email;
-    final String phone;
+    String name;
+    String lastname;
+    String address;
+    String dni;
+    String email;
+    String phone;
     String username;
     String password;
     String repitpassword;

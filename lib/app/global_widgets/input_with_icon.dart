@@ -26,10 +26,11 @@ class TFFieldWithIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return  DecorationContainerInput(
         radio: radio,
+        color: color,
         child: TextFormField(
           keyboardType: isNum ? TextInputType.number : TextInputType.text,
           decoration: decorationInputWithIcon(icono,nombre,placeholder,radio),
-          onChanged: changed,
+          onChanged:changed,
         ),
     );
   }
